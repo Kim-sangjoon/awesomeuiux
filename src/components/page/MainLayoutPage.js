@@ -6,13 +6,15 @@ import {
   Grid,
   Paper
 } from '@mui/material';
+import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
   ...theme.typography.body2,
   padding: theme.spacing(1),
-  textAlign: 'center',
+  textAlign: 'left',
   color: theme.palette.text.secondary,
+  
 }));
 
 const MainLayoutPage = (props) => {
@@ -26,16 +28,19 @@ const MainLayoutPage = (props) => {
                 <p className='contText'>레아아웃 컴포넌트</p>
                     <Box sx={{ flexGrow: 1 }}>
                         <Grid container spacing={2}>
-                            <Grid item xs={12} md={6}>
-                                <Item sx={{border: '1px solid #ddd', boxShadow: 'none'}}>
-                                component area
-                                </Item>
-                            </Grid>
-                            <Grid item xs={12} md={6}>
-                                <Item sx={{border: '1px solid #ddd', boxShadow: 'none'}}>
-                                <code>code area</code>
-                                </Item>
-                            </Grid>
+                            <LiveProvider code="<button>버튼</button>">
+                                <Grid item xs={12} md={6}>
+                                    <Item sx={{border: '1px solid #ddd', boxShadow: 'none', height: '300px', overflowY: 'auto'}}>
+                                        <LivePreview />
+                                        <LiveError />
+                                    </Item>
+                                </Grid>
+                                <Grid item xs={12} md={6}>
+                                    <Item sx={{border: '1px solid #ddd', boxShadow: 'none', height: '300px', backgroundColor: '#333', overflowY: 'auto'}}>
+                                        <LiveEditor />
+                                    </Item>
+                                </Grid>
+                            </LiveProvider>
                         </Grid>
                     </Box>
                 </Box>
