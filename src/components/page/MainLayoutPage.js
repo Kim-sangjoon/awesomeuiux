@@ -2,6 +2,7 @@ import React from 'react';
 import { styled } from '@mui/material/styles';
 import { 
   Box,
+  Button,
   Toolbar,
   Grid,
   Paper,
@@ -9,6 +10,19 @@ import {
   Tab
 } from '@mui/material';
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live";
+
+const scope = { 
+    Box,
+    Button,
+    Toolbar,
+    Grid,
+    Paper,
+    Tabs,
+    Tab  };
+
+const code = `
+<Button sx={{background: "red"}} variant="contained">Hello World</Button>
+`
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -43,7 +57,7 @@ const MainLayoutPage = (props) => {
                 <p className='contText'>레아아웃 컴포넌트</p>
                     <Box sx={{ flexGrow: 1 }}>
                         <Grid container spacing={2}>
-                            <LiveProvider code="<div>Hello World!</div>">
+                            <LiveProvider code={code} scope={scope}>
                                 <Grid item xs={12} md={6}>
                                     <Item sx={leftComponentBox}>
                                         <LivePreview />
