@@ -20,7 +20,8 @@ const scope = {
     Tabs,
     Tab  };
 
-const code = `<Button variant="contained">Hello World</Button>`
+
+const code = `<Button variant="contained">Hello World</Button>`;
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
