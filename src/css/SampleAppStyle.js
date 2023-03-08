@@ -19,6 +19,7 @@ export const theme = createTheme({
           .sampleApp .contText{margin-bottom: 12px}
           .sampleApp a{text-decoration: none; color: #666;}
           .sampleApp a .MuiTypography-root{font-weight: normal}
+          .sampleApp .contentTab{margin-bottom: 20px; margin-top: 20px;}
           
           @media (max-width: 960px) {
             // body{background: red;}
