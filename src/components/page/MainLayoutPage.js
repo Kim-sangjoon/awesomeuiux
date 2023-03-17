@@ -18,7 +18,7 @@ const scope = {
     Grid,
     Paper,
     Tabs,
-    Tab  };
+    Tab};
 
 
 const code = `<Button variant="contained">Hello World</Button>`;
