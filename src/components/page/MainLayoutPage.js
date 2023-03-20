@@ -224,7 +224,9 @@ const MainLayoutPage = (props) => {
                             </Grid>
                         </Box>
                     </div>
+                    <p className='bottom-last'></p>
                 </Box>
+                <p className='top-button' onClick={handleScrollTop}>TOP</p>
             </Box>
         </>
     );
