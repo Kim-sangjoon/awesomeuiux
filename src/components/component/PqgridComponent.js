@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import pq from 'pqgrid';
+import pq from 'pqgridf';
 
 class PqgridComponent extends Component {
     constructor(props) {
@@ -11,7 +11,7 @@ class PqgridComponent extends Component {
 
     componentDidMount() {
     pq.grid(this.refs.grid, {
-        width: '100%',
+        width: '99%',
         height: 500,
         colModel: [
             { title: "Rank", width: 100, dataType: "integer", dataIndx: "rank" },
