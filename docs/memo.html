@@ -44,7 +44,7 @@
                             <li class="nobullet"><img src="./images/img_price2.png" width="100%" height="auto" alt="가격표2" /></li>
                             <li>팀원별로 Editor 또는 Viewer 권한을 관리 하기 위해서는 Propassional 버전 이상을 권장 합니다.</li>
                             <li>Editor(기획자, 디자이너), Viewer(현업, PM, PMO, PL, 퍼블리셔, 개발자 등 프로젝트 팀원)</li>
-                            <li>모든 팀원들은 Figma.com에 접속하여 회원가입을 하고 Figma담당자(통상 디자이너가 담당)에게 Figma ID(이메일주소)를 알려주면 담당자는 팀원을 초대하고 view권한을 할당합니다.</li>
+                            <li>모든 팀원들은 Figma.com에 접속하여 회원가입을 하고 Figma담당자(통상 디자이너가 담당)에게 Figma ID(이메일주소)를 알려주면 담당자는 팀원을 초대하고 edit 또는 view권한을 할당합니다.</li>
                         </ul>
                     </li>
                     <li>
@@ -64,23 +64,55 @@
                     <li>
                         <div class="txt_label">컴포넌트 라이브러리 활용</div>
                         <div class="decription">피그마의 컴포넌트 기능을 활용하여 재사용 가능한 디자인 요소를 생성하고 관리해야 합니다. 버튼, 폼 요소, 아이콘 등과 같은 컴포넌트를 만들어서 일관된 디자인과 개발을 유지할 수 있습니다.</div>
+                        <ul class="list_type_df">
+                            <li>Figma에서의 Component기능은 디자인의 일관성을 유지하기 위한 필수 기능 입니다.</li>
+                            <li>아래 그림은 버튼을 디자인 하고 Component로 만들어 재사용하고 나중에 재사용된 버튼들을 Component를 수정하여 전체 적용하는 예시 입니다. </li>
+                            <li class="nobullet"><img src="./images/img_component_001.png" width="100%" height="auto" alt="Button Component" /></li>
+                            <li class="nobullet"><img src="./images/img_component_002.png" width="100%" height="auto" alt="Button Component" /></li>
+                            <li>재사용된 버튼은 각자의 컬러를 제외한 모든 디자인적 요소는 Component 버튼으로 부터 물려 받습니다. 버튼 이외에도 폼 요소, 아이콘, 텍스트등 모든요소들을 Figma Component로 만들어서 관리할 수 있습니다.</li>
+                        </ul>
                     </li>
                     <li>
                         <div class="txt_label">디자인 시스템 개발</div>
-                        <div class="decription">일관된 디자인을 유지하기 위해 디자인 시스템을 개발해야 합니다. 컬러 팔레트, 텍스트 스타일, 그리드 시스템, 레이아웃 가이드 등을 포함하여 디자인 원칙을 문서화하고 공유해야 합니다.</div>
+                        <div class="decription">일관된 디자인을 유지하기 위해 디자인 시스템을 개발해야 합니다. 컬러 팔레트, 텍스트 스타일, 그리드 시스템, 레이아웃 가이드 등을 포함하여 디자인 원칙을 Component화하고 공유해야 합니다. 아래는 디자인 시스템을 프레임별로 Component화한 예시 입니다.</div>
+                        <ul>
+                            <li class="nobullet"><img src="./images/img_component_003.png" width="100%" height="auto" alt="UI Component" /></li>
+                            <li class="nobullet"><img src="./images/img_component_004.png" width="100%" height="auto" alt="UI Component" /></li>
+                            <li class="nobullet"><img src="./images/img_component_005.png" width="100%" height="auto" alt="UI Component" /></li>
+                        </ul>
                     </li>
                     <li>
                         <div class="txt_label">주석 및 설명 추가</div>
                         <div class="decription">피그마에서 요소에 주석을 추가하여 개발자들이 디자인의 의도를 이해하도록 도움을 줄 수 있습니다. 디자인의 특정 부분에 대한 설명을 추가하고 필요한 경우 프로토타입에 대한 상세한 설명을 제공해야 합니다.</div>
+                        <ul>
+                            <li>주석을 추가하려는 Figma 파일에서 작업 중인 객체 또는 요소를 선택합니다. 선택은 레이어 패널에서 직접 클릭하거나 캔버스에서 요소를 클릭하여 수행할 수 있습니다.</li>
+                            <li class="nobullet"><img src="./images/img_component_006.png" width="100%" height="auto" alt="UI Component" /></li>
+                            <li>상단 메뉴에서 "프로토타입" 탭을 클릭하고 "주석 도구"를 선택합니다. 주석 도구는 캔버스 상단에 나타납니다.</li>
+                            <li class="nobullet"><img src="./images/img_component_007.png" width="100%" height="auto" alt="UI Component" /></li>
+                            <li>주석 도구를 활성화한 후, 주석을 추가하려는 객체 위로 마우스를 이동시켜서 해당 객체에 대한 주석 영역을 선택합니다. 선택 영역은 주석에 대한 대상을 정의하는 데 사용됩니다.</li>
+                            <li>주석 영역을 선택한 후, 주석 패널이 열립니다. 주석 패널에서 설명, 피드백 또는 필요한 내용을 입력합니다. 필요한 경우에는 마크업 기능을 사용하여 텍스트 스타일, 링크 또는 첨부 파일을 추가할 수도 있습니다.</li>
+                            <li>주석을 작성하고 나면 주석 패널 아래에 있는 "댓글"란에 참여자를 추가하여 주석을 공유할 수 있습니다. 이를 통해 협업자와 디자인에 대한 의견을 공유하고 토론할 수 있습니다.</li>
+                            <li>주석이 추가된 객체는 선택한 요소 주변에 주석 아이콘이 표시됩니다. 주석이 있는 객체를 클릭하면 주석 패널이 열리고, 해당 주석과 관련된 내용을 확인할 수 있습니다.</li>
+                        </ul>
                     </li>
                     <li>
                         <div class="txt_label">퍼블리셔 및 개발자와의 협업</div>
                         <div class="decription">퍼블리셔 또는 개발자들과 피그마를 통해 소통하고 협업해야 합니다. 개발자들이 디자인 파일을 열어볼 수 있도록 링크를 공유하고, 디자인 요소의 스펙을 정확하게 전달해야 합니다. 디자인 파일을 업데이트할 때 반드시 퍼블리셔 또는 개발자들에게 알림을 보내고 변경 사항을 공유해야 합니다.</div>
+                        <ul>
+                            <li>디자인 파일에서 특정 요소에 대한 의견을 작성할 수 있습니다. 원하는 요소를 선택하고 "C" 키를 눌러 코멘트 패널을 열거나, 오른쪽 클릭하여 "Add Comment"를 선택합니다. 코멘트를 작성한 후에는 "@멘션"을 사용하여 특정 팀원에게 알림을 보낼 수 있습니다. 예를 들어, "@username"을 입력하면 해당 팀원에게 알림이 전송됩니다.</li>
+                            <li class="nobullet"><img src="./images/img_component_008.png" width="100%" height="auto" alt="UI Component" /></li>
+                            <li>Figma에서 디자인 파일을 프로토타입으로 변환하고 팀원과 공유할 수 있습니다. 프로토타입을 공유하면 팀원들은 디자인 파일에 대한 의견을 작성하고 알림을 받을 수 있습니다. 프로토타입 공유를 위해 "Share" 버튼을 클릭하고, 필요한 설정을 완료한 후에는 "Copy Link"를 선택하여 링크를 팀원들과 공유합니다.</li>
+                            <li class="nobullet"><img src="./images/img_component_010.png" width="100%" height="auto" alt="UI Component" /></li>
+                            <li class="nobullet"><img src="./images/img_component_009.png" width="100%" height="auto" alt="UI Component" /></li>
+                            <li>Figma 설정에서 이메일 알림을 활성화할 수 있습니다. 이렇게 하면 팀원이 코멘트를 남기거나 파일을 공유할 때 이메일로 알림을 받을 수 있습니다. 설정 페이지로 이동하려면 우측 상단의 계정 메뉴를 클릭한 후 "Settings"를 선택합니다. "Notifications" 탭에서 이메일 알림을 관리할 수 있습니다.</li>
+                            <li class="nobullet"><img src="./images/img_component_011.png" width="100%" height="auto" alt="UI Component" /></li>
+                            <li>프로젝트 네트워크 환경이 폐쇄망이어서 Figma 알림이나 외부메일 알림 발송, 확인이 여의치 않은 경우 내부망의 협업시스템이나 내부이메일, 메신저등을 이용하여 소통하고 협업 해야 합니다.</li>
+                        </ul>
                     </li>
                 </ol>
             </div>
         </div>
-    </div>    
+    </div>
 </body>
 </html>
 
