@@ -7,6 +7,7 @@ import {
   Paper
 } from '@mui/material';
 
+
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
   ...theme.typography.body2,
@@ -28,7 +29,7 @@ const MainMessagePage = (props) => {
                         <Grid container spacing={2}>
                             <Grid item xs={12} md={6}>
                                 <Item sx={{border: '1px solid #ddd', boxShadow: 'none'}}>
-                                component area
+                                    component area
                                 </Item>
                             </Grid>
                             <Grid item xs={12} md={6}>
