@@ -6,6 +6,7 @@ import {
   Grid,
   Paper
 } from '@mui/material';
+import { DataGrid, GridRowsProp, GridColDef } from '@mui/x-data-grid';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -14,6 +15,17 @@ const Item = styled(Paper)(({ theme }) => ({
   textAlign: 'center',
   color: theme.palette.text.secondary,
 }));
+
+const rows: GridRowsProp = [
+    { id: 1, col1: 'Hello', col2: 'World' },
+    { id: 2, col1: 'DataGridPro', col2: 'is Awesome' },
+    { id: 3, col1: 'MUI', col2: 'is Amazing' },
+  ];
+  
+  const columns: GridColDef[] = [
+    { field: 'col1', headerName: 'Column 1', width: 150 },
+    { field: 'col2', headerName: 'Column 2', width: 150 },
+  ];
 
 const MainWebChartPage = (props) => {
     return (
@@ -28,7 +40,9 @@ const MainWebChartPage = (props) => {
                         <Grid container spacing={2}>
                             <Grid item xs={12} md={6}>
                                 <Item sx={{border: '1px solid #ddd', boxShadow: 'none'}}>
-                                component area
+                                    <div style={{ height: 300, width: '100%' }}>
+                                        <DataGrid rows={rows} columns={columns} />
+                                    </div>
                                 </Item>
                             </Grid>
                             <Grid item xs={12} md={6}>
