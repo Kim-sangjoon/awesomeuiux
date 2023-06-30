@@ -30,6 +30,7 @@ export const theme = createTheme({
           .sampleApp h1,
           .sampleApp h2{color: #919191;}
           .sampleApp .fc-red{color: #ff6233;}
+          .sampleApp .page-loading{width: 60px !important; height: 60px !important}
 
           
           @media (max-width: 960px) {
