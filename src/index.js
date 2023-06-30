@@ -6,7 +6,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { theme } from './css/SampleAppStyle';
 import './css/style.css';
 
-
+console.log('theme------------------>',theme);
 ReactDOM.createRoot(document.querySelector("#root")).render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>

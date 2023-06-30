@@ -34,7 +34,11 @@ export default function SampleAppMain() {
           width: `calc(100% - ${drawerWidth}px)`,
           ml: `${drawerWidth}px`, boxShadow: 'none',
           borderBottom: '1px solid #dbdbdb',
-          backgroundColor: 'transparent'
+          backgroundColor: 'transparent',
+          '@media (max-width:1200px)':{
+            width: '100%',
+            ml: '10px'
+          }
           }}
         >
           <HeaderWrap />
@@ -47,6 +51,10 @@ export default function SampleAppMain() {
               width: drawerWidth,
               boxSizing: 'border-box',
             },
+            '@media (max-width: 1200px)': {
+              width: 0,
+              display: 'none'
+            }
           }}
           variant="permanent"
           anchor="left"

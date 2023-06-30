@@ -10,6 +10,7 @@ import {
   Tab
 } from '@mui/material';
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live";
+import CopyButton from '../component/CopyButton';
 
 const scope = { 
     Box,
@@ -18,24 +19,32 @@ const scope = {
     Grid,
     Paper,
     Tabs,
-    Tab};
+    Tab
+};
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
   ...theme.typography.body2,
-  padding: theme.spacing(1),
-  color: theme.palette.text.secondary,
-  
+  padding: theme.spacing(0),
+  color: theme.palette.text.secondary,  
 }));
 
 const leftComponentBox = {border: '1px solid #ddd', boxShadow: 'none', height: '300px', overflowY: 'auto', display:'flex', justifyContent: 'center', alignItems: 'center', textAlign: 'center'}
-const rightCodeBox = {border: '1px solid #ddd', boxShadow: 'none', height: '300px', backgroundColor: '#333', overflowY: 'auto'}
+const rightCodeBox = {border: '1px solid #ddd', boxShadow: 'none', height: '300px', backgroundColor: 'rgb(29, 31, 33)', overflowY: 'auto'}
 const code01=`<div className='code-sample'>
-    <Button variant="contained">Hello World</Button>
+    <Button variant="contained" disableRipple>Hello World</Button>
 </div>
 `;
 
 const MainLayoutPage = (props) => {
+    React.useEffect(()=> {
+        handleScrollTop();
+    },[])
+    const [toast, setToast] = React.useState(false);
+    const handleToast = () => {
+        setToast(!toast)
+    }
+
     const [TabValue, setTabValue] = React.useState(0); //탭컨트롤러 상태 0,1,2,3
     const sFix = 90;
     const tab01 = 0;
@@ -84,7 +93,9 @@ const MainLayoutPage = (props) => {
                 setTabValue(3);
             }
         } else if (scValue < sFix) {
-            tabRef.current.classList.remove('fixed');
+            if (tabRef.current) {
+                tabRef.current.classList.remove('fixed');
+            }
         }
     };
 
@@ -113,7 +124,7 @@ const MainLayoutPage = (props) => {
                 <Toolbar />
                 <Box>
                     <h1>레이아웃</h1>
-                    <Tabs className='contentTab' ref={tabRef} value={TabValue} onChange={handleTabChange}>
+                    <Tabs className='contentTab' ref={tabRef} value={TabValue} onChange={handleTabChange} sx={{backgroundColor: 'rgb(255 255 255 / 60%)'}}>
                         <Tab label="분할 샘플" />
                         <Tab label="2분할" />
                         <Tab label="3분할" />
@@ -131,10 +142,11 @@ const MainLayoutPage = (props) => {
                                             <LiveError />
                                         </Item>
                                     </Grid>
-                                    <Grid item xs={12} md={6}>
+                                    <Grid item xs={12} md={6} sx={{position: 'relative'}}>
                                         <Item sx={rightCodeBox}>
                                             <LiveEditor />
                                         </Item>
+                                        <CopyButton onClick={handleToast} code={code01} />
                                     </Grid>
                                 </LiveProvider>
                             </Grid>

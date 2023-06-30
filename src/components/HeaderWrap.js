@@ -71,7 +71,7 @@ const HeaderWrap = (props) => {
     return (
         <>
             
-            <Toolbar sx={{justifyContent: 'end', backdropFilter: 'blur(8px)'}}>
+            <Toolbar sx={{justifyContent: 'end', backdropFilter: 'blur(8px)', backgroundColor: 'rgb(255 255 255 / 60%)'}}>
                 <FormControl sx={{ m: 0, width: 200, mr: 1}} size='small'>
                     <Select
                         sx={{backgroundColor: '#fff'}}
