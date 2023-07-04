@@ -127,7 +127,6 @@ const HeaderWrap = () => {
                 </Box>
                 <FormControl sx={{ m: 0, width: 120}} size='small'>
                     <Select
-                        sx={{backgroundColor: '#fff'}}
                         displayEmpty
                         value={languageName}
                         onChange={languageHandleChange}
