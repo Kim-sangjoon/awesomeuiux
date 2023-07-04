@@ -1,13 +1,25 @@
 import React from 'react';
-import { useTheme } from '@mui/material/styles';
+// import { useTheme } from '@mui/material/styles';
+import { Link } from 'react-router-dom';
 import {
   Toolbar,
+  IconButton,
+  ListItemText,
+  ListItemIcon,
+  ListItem,
+  List,
   FormControl,
   Select,
   OutlinedInput,
-  MenuItem
+  MenuItem,
+  Box,
+  Drawer
 } from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
+import { MenuData } from '../MenuData';
+import { theme } from '../css/SampleAppStyle';
 
+const lnbInfo = MenuData;
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
 const MenuProps = {
@@ -42,9 +54,18 @@ return {
 
 const HeaderWrap = (props) => {
 
-    const theme = useTheme();
+    // const theme = useTheme();
     const [languageName, setLanguageName] = React.useState([]);
     const [downloadName, setDownloadName] = React.useState([]);
+    const [sideMenu, setSideMenu] = React.useState({left: false});
+    const toggleDrawer = (anchor, open) => (event) => {
+        if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+          return;
+        }
+    
+        setSideMenu({ ...sideMenu, [anchor]: open });
+      };
+
   
     // 다운로드 select
     const downloadHandleChange = (event) => {
@@ -72,6 +93,39 @@ const HeaderWrap = (props) => {
         <>
             
             <Toolbar sx={{justifyContent: 'end', backdropFilter: 'blur(8px)', backgroundColor: 'rgb(255 255 255 / 60%)'}}>
+                <Box sx={{
+                    display: 'none', 
+                    '@media(max-width: 1200px)': {
+                        display: 'flex',
+                        flex: 1,
+                }}}>
+                    <IconButton
+                        size='large'
+                        edge='start'
+                        aria-label='menu'
+                        onClick={toggleDrawer('left', true)}
+                    >                    
+                        <MenuIcon />
+                    </IconButton>
+                </Box>
+                <Drawer
+                    anchor={'left'}
+                    open={sideMenu['left']}
+                    onClose={toggleDrawer('left', false)}
+                >
+                    <List sx={{paddingTop: '20px', paddingRight: '40px'}}>
+                        {lnbInfo.map((item, index) => (
+                            <Link key={index} to={item.link}>
+                                <ListItem onClick={toggleDrawer('left', false)}>
+                                    <ListItemIcon>
+                                        {item.iconName}
+                                    </ListItemIcon>
+                                    <ListItemText primary={item.menuNameCode} />
+                                </ListItem>
+                            </Link>
+                        ))}
+                    </List>
+                </Drawer>
                 <FormControl sx={{ m: 0, width: 200, mr: 1}} size='small'>
                     <Select
                         sx={{backgroundColor: '#fff'}}
@@ -133,6 +187,7 @@ const HeaderWrap = (props) => {
                     </Select>
                 </FormControl>
             </Toolbar>
+            
         </>
     );
 };
