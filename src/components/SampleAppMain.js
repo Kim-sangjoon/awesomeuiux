@@ -26,7 +26,7 @@ Prism.highlightAll();
 
 export default function SampleAppMain() {
   return (
-    <BrowserRouter basename='/'>
+    <BrowserRouter basename='/react-sample-app'>
       <Box className='sampleApp' sx={{ display: 'flex' }}>
         <AppBar
           position="fixed"
@@ -69,6 +69,7 @@ export default function SampleAppMain() {
         }>
           <Routes>
             <Route path="/" element={<MainLayoutPage />}></Route>
+            <Route path="/layout" element={<MainLayoutPage />}></Route>
             <Route path="/component" element={<MainComponentPage />}></Route>
             <Route path="/webgrid" element={<MainWebGridPage />}></Route>
             <Route path="/webchart" element={<MainWebChartPage />}></Route>

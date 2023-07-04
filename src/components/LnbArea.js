@@ -24,7 +24,9 @@ const LnbArea = (props) => {
     <>
       <Toolbar sx={{justifyContent: 'center'}}>
         <Box>
-            <h1 className='logo'>LOGO</h1>
+            <Link to='/'>
+              <h1 className='logo'>LOGO</h1>
+            </Link>
         </Box>
       </Toolbar>
       <List sx={{p:0}}>

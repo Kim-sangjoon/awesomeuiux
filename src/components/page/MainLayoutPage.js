@@ -7,7 +7,8 @@ import {
   Grid,
   Paper,
   Tabs,
-  Tab
+  Tab,
+  Stack
 } from '@mui/material';
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live";
 import CopyButton from '../component/CopyButton';
@@ -19,7 +20,8 @@ const scope = {
     Grid,
     Paper,
     Tabs,
-    Tab
+    Tab,
+    Stack
 };
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -32,7 +34,11 @@ const Item = styled(Paper)(({ theme }) => ({
 const leftComponentBox = {border: '1px solid #ddd', boxShadow: 'none', height: '300px', overflowY: 'auto', display:'flex', justifyContent: 'center', alignItems: 'center', textAlign: 'center'}
 const rightCodeBox = {border: '1px solid #ddd', boxShadow: 'none', height: '300px', backgroundColor: 'rgb(29, 31, 33)', overflowY: 'auto'}
 const code01=`<div className='code-sample'>
-    <Button variant="contained" disableRipple>Hello World</Button>
+    <Stack spacing={2} direction="row" justifyContent="center">
+        <Button variant="text" disableRipple>Hello World</Button>
+        <Button variant="contained" disableRipple>Hello World</Button>
+        <Button variant="outlined" disableRipple>Hello World</Button>
+    </Stack>
 </div>
 `;
 

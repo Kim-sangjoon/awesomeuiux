@@ -45,8 +45,11 @@ export const theme = createTheme({
         .sampleApp .page-loading{width: 60px !important; height: 60px !important}
 
         
-        @media (max-width: 960px) {
-          // body{background: red;}
+        @media (max-width: 1200px) {
+          .sampleApp .contentTab.fixed{top: 45px; left: 0px;}
+        }
+        @media (max-width: 600px) {
+          .sampleApp .contentTab.fixed{top: 37px; left: 0px;}
         }
       `,
     },

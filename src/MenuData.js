@@ -7,7 +7,7 @@ import ChatIcon from '@mui/icons-material/Chat';
 
 export const MenuData = [
   {
-    "link":"/",
+    "link":"/layout",
     "selIndex":0,
     "eventNum":0,
     "iconName":<DashboardIcon />,

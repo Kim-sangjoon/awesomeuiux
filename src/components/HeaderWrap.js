@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import {
   Toolbar,
   IconButton,
+  ListItemButton,
   ListItemText,
   ListItemIcon,
   ListItem,
@@ -32,16 +33,9 @@ PaperProps: {
 };
 const langNames = [
 '한국어',
-'English',
-'中文',
-'日本語',
+'English'
 ];
 
-const downNames = [
-'설치 가이드',
-'개발 가이드',
-'MUI 메뉴얼', 
-];
 
 function getStyles(name, styleName, theme) {
 return {
@@ -52,11 +46,10 @@ return {
 };
 }
 
-const HeaderWrap = (props) => {
+const HeaderWrap = () => {
 
     // const theme = useTheme();
     const [languageName, setLanguageName] = React.useState([]);
-    const [downloadName, setDownloadName] = React.useState([]);
     const [sideMenu, setSideMenu] = React.useState({left: false});
     const toggleDrawer = (anchor, open) => (event) => {
         if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
@@ -66,18 +59,6 @@ const HeaderWrap = (props) => {
         setSideMenu({ ...sideMenu, [anchor]: open });
       };
 
-  
-    // 다운로드 select
-    const downloadHandleChange = (event) => {
-      const {
-        target: { value },
-      } = event;
-      setDownloadName(
-        // On autofill we get a stringified value.
-        typeof value === 'string' ? value.split(',') : value,
-      );
-    };
-  
     // 다국어 select
     const languageHandleChange = (event) => {
       const {
@@ -91,13 +72,12 @@ const HeaderWrap = (props) => {
 
     return (
         <>
-            
             <Toolbar sx={{justifyContent: 'end', backdropFilter: 'blur(8px)', backgroundColor: 'rgb(255 255 255 / 60%)'}}>
                 <Box sx={{
                     display: 'none', 
                     '@media(max-width: 1200px)': {
                         display: 'flex',
-                        flex: 1,
+                        flex: 'none',
                 }}}>
                     <IconButton
                         size='large'
@@ -112,50 +92,39 @@ const HeaderWrap = (props) => {
                     anchor={'left'}
                     open={sideMenu['left']}
                     onClose={toggleDrawer('left', false)}
+                    sx={{'& .MuiDrawer-paper': {
+                        width: 200,
+                        boxSizing: 'border-box',
+                        paddingTop: 5,
+                    }
+                    }}
                 >
-                    <List sx={{paddingTop: '20px', paddingRight: '40px'}}>
+                    <List sx={{p:0}}>
                         {lnbInfo.map((item, index) => (
                             <Link key={index} to={item.link}>
-                                <ListItem onClick={toggleDrawer('left', false)}>
-                                    <ListItemIcon>
-                                        {item.iconName}
-                                    </ListItemIcon>
-                                    <ListItemText primary={item.menuNameCode} />
+                                <ListItem sx={{p:0}} onClick={toggleDrawer('left', false)}>
+                                    <ListItemButton>
+                                        <ListItemIcon>
+                                            {item.iconName}
+                                        </ListItemIcon>
+                                        <ListItemText primary={item.menuNameCode} />
+                                    </ListItemButton>
                                 </ListItem>
                             </Link>
                         ))}
                     </List>
                 </Drawer>
-                <FormControl sx={{ m: 0, width: 200, mr: 1}} size='small'>
-                    <Select
-                        sx={{backgroundColor: '#fff'}}
-                        displayEmpty
-                        value={downloadName}
-                        onChange={downloadHandleChange}
-                        input={<OutlinedInput />}
-                        renderValue={(selected) => {
-                        if (selected.length === 0) {
-                            return <em>메뉴얼 다운로드</em>;
-                        }
-                        return selected.join(', ');
-                        }}
-                        MenuProps={MenuProps}
-                        inputProps={{ 'aria-label': 'Without label' }}
-                    >
-                        <MenuItem disabled value="">
-                        <em>Download</em>
-                        </MenuItem>
-                        {downNames.map((name) => (
-                        <MenuItem
-                            key={name}
-                            value={name}
-                            style={getStyles(name, downloadName, theme)}
-                        >
-                            {name}
-                        </MenuItem>
-                        ))}
-                    </Select>
-                </FormControl>
+                <Box sx={{
+                    display: 'none',
+                    '@media(max-width: 1200px)': {
+                        display: 'flex',
+                        flex: 1,
+                        paddingLeft: '10px'
+                }}}>
+                    <Link to='/'>
+                        <h1 className='logo'>LOGO</h1>
+                    </Link>
+                </Box>
                 <FormControl sx={{ m: 0, width: 120}} size='small'>
                     <Select
                         sx={{backgroundColor: '#fff'}}
