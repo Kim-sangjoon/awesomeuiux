@@ -40,7 +40,7 @@ const langNames = [
 const downNames = [
 '설치 가이드',
 '개발 가이드',
-'MUI 메뉴얼',
+'MUI 메뉴얼', 
 ];
 
 function getStyles(name, styleName, theme) {
