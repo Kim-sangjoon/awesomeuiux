@@ -35,9 +35,9 @@ const leftComponentBox = {border: '1px solid #ddd', boxShadow: 'none', height: '
 const rightCodeBox = {border: '1px solid #ddd', boxShadow: 'none', height: '300px', backgroundColor: 'rgb(29, 31, 33)', overflowY: 'auto'}
 const code01=`<div className='code-sample'>
     <Stack spacing={2} direction="row" justifyContent="center">
-        <Button variant="text" disableRipple>Hello World</Button>
-        <Button variant="contained" disableRipple>Hello World</Button>
-        <Button variant="outlined" disableRipple>Hello World</Button>
+        <Button variant="text">Button</Button>
+        <Button variant="contained">Button</Button>
+        <Button variant="outlined">Button</Button>
     </Stack>
 </div>
 `;
