@@ -170,10 +170,11 @@ const MainLayoutPage = (props) => {
                                             <LiveError />
                                         </Item>
                                     </Grid>
-                                    <Grid item xs={12} md={6}>
+                                    <Grid item xs={12} md={6} sx={{position: 'relative'}}>
                                         <Item sx={rightCodeBox}>
                                             <LiveEditor />
                                         </Item>
+                                        <CopyButton onClick={handleToast} code={code01} />
                                     </Grid>
                                 </LiveProvider>
                             </Grid>
@@ -191,10 +192,11 @@ const MainLayoutPage = (props) => {
                                             <LiveError />
                                         </Item>
                                     </Grid>
-                                    <Grid item xs={12} md={6}>
+                                    <Grid item xs={12} md={6} sx={{position: 'relative'}}>
                                         <Item sx={rightCodeBox}>
                                             <LiveEditor />
                                         </Item>
+                                        <CopyButton onClick={handleToast} code={code01} />
                                     </Grid>
                                 </LiveProvider>
                             </Grid>
@@ -212,31 +214,11 @@ const MainLayoutPage = (props) => {
                                             <LiveError />
                                         </Item>
                                     </Grid>
-                                    <Grid item xs={12} md={6}>
+                                    <Grid item xs={12} md={6} sx={{position: 'relative'}}>
                                         <Item sx={rightCodeBox}>
                                             <LiveEditor />
                                         </Item>
-                                    </Grid>
-                                </LiveProvider>
-                            </Grid>
-                        </Box>
-                    </div>
-                    <div className='tab-item'>
-                        <h2>분할 샘플(반응형)</h2>
-                        <p className='contText'>레아아웃 컴포넌트</p>
-                        <Box sx={{ flexGrow: 1 }}>
-                            <Grid container spacing={2}>
-                                <LiveProvider code={code01} scope={scope}>
-                                    <Grid item xs={12} md={6}>
-                                        <Item sx={leftComponentBox}>
-                                            <LivePreview />
-                                            <LiveError />
-                                        </Item>
-                                    </Grid>
-                                    <Grid item xs={12} md={6}>
-                                        <Item sx={rightCodeBox}>
-                                            <LiveEditor />
-                                        </Item>
+                                        <CopyButton onClick={handleToast} code={code01} />
                                     </Grid>
                                 </LiveProvider>
                             </Grid>

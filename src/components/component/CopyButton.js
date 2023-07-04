@@ -76,7 +76,7 @@ const CopyButton = ({code}) => {
                 open={open}
                 autoHideDuration={4000}
                 onClose={handleClose}
-                message="코드복사 성공!! [Ctrl + V]로 원하는 곳에 붙여넣기 할 수 있습니다."
+                message="코드복사!! [Ctrl + V]로 원하는 곳에 붙여넣기 하세요."
                 action={action}
             />
         </>
