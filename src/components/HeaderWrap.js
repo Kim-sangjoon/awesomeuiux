@@ -122,7 +122,7 @@ const HeaderWrap = () => {
                         paddingLeft: '10px'
                 }}}>
                     <Link to='/'>
-                        <h1 className='logo'>LOGO</h1>
+                        <h1 className='logo'>Awesome UI</h1>
                     </Link>
                 </Box>
                 <FormControl sx={{ m: 0, width: 120}} size='small'>

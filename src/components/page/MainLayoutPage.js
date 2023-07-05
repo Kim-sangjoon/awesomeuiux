@@ -87,6 +87,11 @@ const MainLayoutPage = (props) => {
     const handleScroll = () => {
         let scValue = window.scrollY;
         console.log("현재좌표" + scValue);
+        if (scValue === 0) {
+            document.getElementsByClassName('top-button')[0].classList.remove('show');
+        } else {
+            document.getElementsByClassName('top-button')[0].classList.add('show');
+        }
         if (scValue > sFix) {
             tabRef.current.classList.add('fixed'); 
             if(scValue > tab01 && scValue < tab02){
@@ -130,13 +135,14 @@ const MainLayoutPage = (props) => {
                 <Toolbar />
                 <Box>
                     <h1>레이아웃</h1>
-                    <Tabs className='contentTab' ref={tabRef} value={TabValue} onChange={handleTabChange} sx={{backgroundColor: 'rgb(255 255 255 / 60%)'}}>
+                    <Tabs className='contentTab' ref={tabRef} value={TabValue} variant="scrollable"
+  scrollButtons="auto" onChange={handleTabChange} sx={{backgroundColor: 'rgb(255 255 255 / 60%)'}}>
                         <Tab label="분할 샘플" />
                         <Tab label="2분할" />
                         <Tab label="3분할" />
                         <Tab label="4분할" />
                     </Tabs>
-                    <div className='tab-item'>
+                    <Box className='tab-item'>
                         <h2>분할 샘플(반응형)</h2>
                         <p className='contText'>레아아웃 컴포넌트</p>
                         <Box sx={{ flexGrow: 1 }}>
@@ -157,8 +163,8 @@ const MainLayoutPage = (props) => {
                                 </LiveProvider>
                             </Grid>
                         </Box>
-                    </div>
-                    <div className='tab-item'>
+                    </Box>
+                    <Box className='tab-item'>
                         <h2>분할 샘플(반응형)</h2>
                         <p className='contText'>레아아웃 컴포넌트</p>
                         <Box sx={{ flexGrow: 1 }}>
@@ -179,8 +185,8 @@ const MainLayoutPage = (props) => {
                                 </LiveProvider>
                             </Grid>
                         </Box>
-                    </div>
-                    <div className='tab-item'>
+                    </Box>
+                    <Box className='tab-item'>
                         <h2>분할 샘플(반응형)</h2>
                         <p className='contText'>레아아웃 컴포넌트</p>
                         <Box sx={{ flexGrow: 1 }}>
@@ -201,8 +207,8 @@ const MainLayoutPage = (props) => {
                                 </LiveProvider>
                             </Grid>
                         </Box>
-                    </div>
-                    <div className='tab-item'>
+                    </Box>
+                    <Box className='tab-item'>
                         <h2>분할 샘플(반응형)</h2>
                         <p className='contText'>레아아웃 컴포넌트</p>
                         <Box sx={{ flexGrow: 1 }}>
@@ -223,10 +229,10 @@ const MainLayoutPage = (props) => {
                                 </LiveProvider>
                             </Grid>
                         </Box>
-                    </div>
-                    <p className='bottom-last'></p>
+                    </Box>
+                    <Box className='bottom-last'></Box>
                 </Box>
-                <p className='top-button' onClick={handleScrollTop}>TOP</p>
+                <Box className='top-button' onClick={handleScrollTop}>TOP</Box>
             </Box>
         </>
     );

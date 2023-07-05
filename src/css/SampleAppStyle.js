@@ -12,6 +12,7 @@ export const theme = createTheme({
   components: {
     MuiCssBaseline: {
       styleOverrides: `
+        html,body,.sampleApp{touch-action: pan-y;}
         .sampleApp * {
             font-family: 'Noto Sans KR', sans-serif;
         }
@@ -33,7 +34,8 @@ export const theme = createTheme({
         .sampleApp .contentTab{margin-bottom: 20px; margin-top: 20px;}
         .sampleApp .contentTab.fixed{position: fixed; top: 45px; left: 200px; width: 100%; z-index: 1; backdrop-filter: blur(8px); border-bottom: 1px solid #dbdbdb;}
         .sampleApp .button-sample > button + button{margin-left: 10px;}
-        .sampleApp .top-button{display: flex; justify-content: center; align-items: center; position: fixed; bottom: 20px; right: 20px; width: 50px; height: 50px; background: #1490ef; color: #fff; border-radius: 50px; cursor: pointer;}
+        .sampleApp .top-button{display: flex; justify-content: center; align-items: center; position: fixed; bottom: 20px; right: 20px; width: 50px; height: 50px; background: #1490ef; color: #fff; border-radius: 50px; cursor: pointer; opacity: 0; transition: opacity 0.5s ease-in-out; pointer-events: none;}
+        .sampleApp .top-button.show{opacity: 1; pointer-events: auto}
         .sampleApp .tab-item{}
         .sampleApp .tab-item + .tab-item{margin-top: 50px;}
         .sampleApp .bottom-last{height: 200px;}
