@@ -31,14 +31,14 @@ export const theme = createTheme({
         .sampleApp .contText{margin-bottom: 12px}
         .sampleApp a{text-decoration: none; color: #666;}
         .sampleApp a .MuiTypography-root{font-weight: normal}
-        .sampleApp .contentTab{margin-bottom: 20px; margin-top: 20px;}
+        .sampleApp .contentTab{margin-bottom: 20px; margin-top: 20px; width: calc(100vw - 300px)}
         .sampleApp .contentTab.fixed{position: fixed; top: 45px; left: 200px; width: 100%; z-index: 1; backdrop-filter: blur(8px); border-bottom: 1px solid #dbdbdb;}
         .sampleApp .button-sample > button + button{margin-left: 10px;}
         .sampleApp .top-button{display: flex; justify-content: center; align-items: center; position: fixed; bottom: 20px; right: 20px; width: 50px; height: 50px; background: #1490ef; color: #fff; border-radius: 50px; cursor: pointer; opacity: 0; transition: opacity 0.5s ease-in-out; pointer-events: none;}
         .sampleApp .top-button.show{opacity: 1; pointer-events: auto}
         .sampleApp .tab-item{}
         .sampleApp .tab-item + .tab-item{margin-top: 50px;}
-        .sampleApp .bottom-last{height: 200px;}
+        .sampleApp .bottom-last{height: 600px;}
         .sampleApp .MuiPaper-root > div{width: 100%;}
         .sampleApp .MuiPaper-root > div[class]{width: auto;}
         .sampleApp h1,
@@ -48,6 +48,7 @@ export const theme = createTheme({
 
         
         @media (max-width: 1200px) {
+          .sampleApp .contentTab{width: calc(100vw - 60px)}
           .sampleApp .contentTab.fixed{top: 45px; left: 0px;}
         }
         @media (max-width: 600px) {

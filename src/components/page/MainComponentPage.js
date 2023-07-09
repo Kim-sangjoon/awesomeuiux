@@ -17,11 +17,9 @@ const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
   ...theme.typography.body2,
   padding: theme.spacing(1),
-  color: theme.palette.text.secondary,  
+  color: theme.palette.text.secondary,
 }));
 
-const leftComponentBox = {border: '1px solid #ddd', boxShadow: 'none', height: '400px', overflowY: 'auto', display:'flex', justifyContent: 'center', alignItems: 'center', textAlign: 'center', backgroundColor: 'rgb(243, 246, 249)'}
-const rightCodeBox = {border: '1px solid #ddd', boxShadow: 'none', height: '400px', backgroundColor: 'rgb(29, 31, 33)', overflowY: 'auto'}
 const scope = { 
     Box,
     Button,
@@ -30,63 +28,20 @@ const scope = {
     Paper,
     Tabs,
     Tab,
-    Stack,
-    Item
+    Stack
 };
-const code01=`<Box sx={{ flexGrow: 1 }}>
-    <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
-    {Array.from(Array(6)).map((_, index) => (
-        <Grid item xs={2} sm={4} md={4} key={index}>
-            <Item>xs=2</Item>
-        </Grid>
-    ))}
-    </Grid>
-</Box>
-`;
-const code02=`<Box sx={{ flexGrow: 1 }}>
-    <Grid container spacing={2}>
-        <Grid item xs={6}>
-            <Item>xs=6</Item>
-        </Grid>
-        <Grid item xs={6}>
-            <Item>xs=6</Item>
-        </Grid>
-    </Grid>
-</Box>
-`;
-const code03=`<Box sx={{ flexGrow: 1 }}>
-    <Grid container spacing={2}>
-        <Grid item xs={4}>
-            <Item>xs=4</Item>
-        </Grid>
-        <Grid item xs={4}>
-            <Item>xs=4</Item>
-        </Grid>
-        <Grid item xs={4}>
-            <Item>xs=4</Item>
-        </Grid>
-    </Grid>
-</Box>
-`;
-const code04=`<Box sx={{ flexGrow: 1 }}>
-    <Grid container spacing={2}>
-        <Grid item xs={3}>
-            <Item>xs=3</Item>
-        </Grid>
-        <Grid item xs={3}>
-            <Item>xs=3</Item>
-        </Grid>
-        <Grid item xs={3}>
-            <Item>xs=3</Item>
-        </Grid>
-        <Grid item xs={3}>
-            <Item>xs=3</Item>
-        </Grid>
-    </Grid>
-</Box>
+const leftComponentBox = {border: '1px solid #ddd', boxShadow: 'none', height: '300px', overflowY: 'auto', display:'flex', justifyContent: 'center', alignItems: 'center', textAlign: 'center'}
+const rightCodeBox = {border: '1px solid #ddd', boxShadow: 'none', height: '300px', backgroundColor: 'rgb(29, 31, 33)', overflowY: 'auto', textAlign: 'left'}
+const code01=`<div className='code-sample'>
+    <Stack spacing={2} direction="row" justifyContent="center">
+        <Button variant="text">Button</Button>
+        <Button variant="contained">Button</Button>
+        <Button variant="outlined">Button</Button>
+    </Stack>
+</div>
 `;
 
-const MainLayoutPage = (props) => {
+const MainComponentPage = (props) => {
     React.useEffect(()=> {
         handleScrollTop();
     },[])
@@ -178,16 +133,27 @@ const MainLayoutPage = (props) => {
             <Box className='contentboxwrap'>
                 <Toolbar />
                 <Box>
-                    <h1>레이아웃</h1>
+                    <h1>컴포넌트</h1>
                     <Tabs className='contentTab' ref={tabRef} value={TabValue} variant="scrollable" scrollButtons="auto" onChange={handleTabChange} sx={{backgroundColor: 'rgb(255 255 255 / 60%)'}}>
-                        <Tab label="분할 샘플" />
-                        <Tab label="2분할" />
-                        <Tab label="3분할" />
-                        <Tab label="4분할" />
+                        <Tab label="Button" />
+                        <Tab label="Checkbox" />
+                        <Tab label="Radio Group" />
+                        <Tab label="Select" />
+                        <Tab label="Text Field" />
+                        <Tab label="List" />
+                        <Tab label="Table" />
+                        <Tab label="Tooltip" />
+                        <Tab label="Alert" />
+                        <Tab label="Dialog" />
+                        <Tab label="Accordion" />
+                        <Tab label="Pagination" />
+                        <Tab label="Tabs" />
+                        <Tab label="Modal" />
+                        <Tab label="Date Pickers" />
                     </Tabs>
                     <Box className='tab-item'>
-                        <h2>분할 샘플(반응형)</h2>
-                        <p className='contText'>레아아웃 컴포넌트</p>
+                        <h2>버튼</h2>
+                        <p className='contText'>버튼 컴포넌트</p>
                         <Box sx={{ flexGrow: 1 }}>
                             <Grid container spacing={2}>
                                 <LiveProvider code={code01} scope={scope}>
@@ -208,11 +174,11 @@ const MainLayoutPage = (props) => {
                         </Box>
                     </Box>
                     <Box className='tab-item'>
-                        <h2>2분할</h2>
-                        <p className='contText'>2분할 레이아웃</p>
+                        <h2>버튼</h2>
+                        <p className='contText'>버튼 컴포넌트</p>
                         <Box sx={{ flexGrow: 1 }}>
                             <Grid container spacing={2}>
-                                <LiveProvider code={code02} scope={scope}>
+                                <LiveProvider code={code01} scope={scope}>
                                     <Grid item xs={12} md={6}>
                                         <Item sx={leftComponentBox}>
                                             <LivePreview />
@@ -223,18 +189,18 @@ const MainLayoutPage = (props) => {
                                         <Item sx={rightCodeBox}>
                                             <LiveEditor />
                                         </Item>
-                                        <CopyButton onClick={handleToast} code={code02} />
+                                        <CopyButton onClick={handleToast} code={code01} />
                                     </Grid>
                                 </LiveProvider>
                             </Grid>
                         </Box>
                     </Box>
                     <Box className='tab-item'>
-                        <h2>3분할</h2>
-                        <p className='contText'>3분할 레이아웃</p>
+                        <h2>버튼</h2>
+                        <p className='contText'>버튼 컴포넌트</p>
                         <Box sx={{ flexGrow: 1 }}>
                             <Grid container spacing={2}>
-                                <LiveProvider code={code03} scope={scope}>
+                                <LiveProvider code={code01} scope={scope}>
                                     <Grid item xs={12} md={6}>
                                         <Item sx={leftComponentBox}>
                                             <LivePreview />
@@ -245,18 +211,18 @@ const MainLayoutPage = (props) => {
                                         <Item sx={rightCodeBox}>
                                             <LiveEditor />
                                         </Item>
-                                        <CopyButton onClick={handleToast} code={code03} />
+                                        <CopyButton onClick={handleToast} code={code01} />
                                     </Grid>
                                 </LiveProvider>
                             </Grid>
                         </Box>
                     </Box>
                     <Box className='tab-item'>
-                        <h2>4분할</h2>
-                        <p className='contText'>4분할 레이아웃</p>
+                        <h2>버튼</h2>
+                        <p className='contText'>버튼 컴포넌트</p>
                         <Box sx={{ flexGrow: 1 }}>
                             <Grid container spacing={2}>
-                                <LiveProvider code={code04} scope={scope}>
+                                <LiveProvider code={code01} scope={scope}>
                                     <Grid item xs={12} md={6}>
                                         <Item sx={leftComponentBox}>
                                             <LivePreview />
@@ -267,7 +233,7 @@ const MainLayoutPage = (props) => {
                                         <Item sx={rightCodeBox}>
                                             <LiveEditor />
                                         </Item>
-                                        <CopyButton onClick={handleToast} code={code04} />
+                                        <CopyButton onClick={handleToast} code={code01} />
                                     </Grid>
                                 </LiveProvider>
                             </Grid>
@@ -281,4 +247,4 @@ const MainLayoutPage = (props) => {
     );
 };
 
-export default MainLayoutPage;
+export default MainComponentPage;

@@ -11,7 +11,7 @@ import LnbArea from './LnbArea';
 import HeaderWrap from './HeaderWrap';
 // Page Component
 const MainLayoutPage = lazy(() => import('./page/MainLayoutPage'));  
-const MainComponentPage = lazy(() => import('./page/MainConponentPage'));  
+const MainComponentPage = lazy(() => import('./page/MainComponentPage'));  
 const MainWebGridPage = lazy(() => import('./page/MainWebGridPage'));  
 const MainWebChartPage = lazy(() => import('./page/MainWebChartPage'));  
 const MainCommonCodePage = lazy(() => import('./page/MainCommonCodePage'));  
@@ -68,7 +68,7 @@ export default function SampleAppMain() {
           </Box>
         }>
           <Routes>
-            <Route path="/" element={<MainLayoutPage />}></Route>
+            <Route path="/" exact element={<MainLayoutPage />}></Route>
             <Route path="/layout" element={<MainLayoutPage />}></Route>
             <Route path="/component" element={<MainComponentPage />}></Route>
             <Route path="/webgrid" element={<MainWebGridPage />}></Route>
