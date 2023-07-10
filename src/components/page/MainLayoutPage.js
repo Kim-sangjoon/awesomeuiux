@@ -96,11 +96,14 @@ const MainLayoutPage = (props) => {
     }
 
     const [TabValue, setTabValue] = React.useState(0); //탭컨트롤러 상태 0,1,2,3
+    const screenWidth = document.body.offsetWidth;
+    console.log('가로사이즈',screenWidth);
     const sFix = 90;
     const tab01 = 0;
-    const tab02 = 520;
-    const tab03 = 1053;
-    const tab04 = 1567;
+    const tab02 = screenWidth > 900 ? 520 : 933;
+    const tab03 = screenWidth > 900 ? 1053 : 1882;
+    const tab04 = screenWidth > 900 ? 1567 : 2816;
+
 
     const handleTabChange = (event, newTabValue) => {
         if (newTabValue === 0) {
@@ -163,14 +166,15 @@ const MainLayoutPage = (props) => {
             clearInterval(timer);
             window.removeEventListener("scroll", handleScroll);
         }
+        // eslint-disable-next-line
     },[])
 
     //스크롤 top 컨트롤
-    const handleScrollTop = () => {
+    function handleScrollTop() {
         window.scrollTo({
             top: 0,
             behavior: "smooth"
-        })
+        });
     }
 
     return (

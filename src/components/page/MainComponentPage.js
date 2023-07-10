@@ -416,24 +416,25 @@ const MainComponentPage = (props) => {
     const handleToast = () => {
         setToast(!toast)
     }
-
     const [TabValue, setTabValue] = React.useState(0); //탭컨트롤러 상태 0,1,2,3
+    const screenWidth = document.body.offsetWidth;
+    console.log('가로사이즈',screenWidth);
     const sFix = 90;
-    const tab01 = 0;    // Button
-    const tab02 = 526;  // Checkbox
-    const tab03 = 1053; // Radio
-    const tab04 = 1578; // Select
-    const tab05 = 2092; // Text Field
-    const tab06 = 2619; // List
-    const tab07 = 3133; // Table
-    const tab08 = 3659; // Tooltip
-    const tab09 = 4185; // Alert
-    const tab10 = 4699; // Dialog
-    const tab11 = 5226; // Accordion
-    const tab12 = 5739; // Pagination
-    const tab13 = 6277; // Tabs
-    const tab14 = 6790; // Modal
-    const tab15 = 7318; // Date Pickers
+    const tab01 = 0; // Button
+    const tab02 = screenWidth > 900 ? 526 : 939;    // Checkbox
+    const tab03 = screenWidth > 900 ? 1053 : 1878;  // Radio
+    const tab04 = screenWidth > 900 ? 1578 : 2808;  // Select
+    const tab05 = screenWidth > 900 ? 2092 : 3768;  // Text Field
+    const tab06 = screenWidth > 900 ? 2619 : 4708;  // List
+    const tab07 = screenWidth > 900 ? 3133 : 5633;  // Table
+    const tab08 = screenWidth > 900 ? 3659 : 6572;  // Tooltip
+    const tab09 = screenWidth > 900 ? 4185 : 7511;  // Alert
+    const tab10 = screenWidth > 900 ? 4699 : 8450;  // Dialog
+    const tab11 = screenWidth > 900 ? 5226 : 9388;  // Accordion
+    const tab12 = screenWidth > 900 ? 5739 : 10328; // Pagination
+    const tab13 = screenWidth > 900 ? 6277 : 11267; // Tabs
+    const tab14 = screenWidth > 900 ? 6790 : 12205; // Modal
+    const tab15 = screenWidth > 900 ? 7318 : 13144; // Date Pickers
 
     const handleTabChange = (event, newTabValue) => {
         if (newTabValue === 0) {
@@ -573,6 +574,7 @@ const MainComponentPage = (props) => {
             clearInterval(timer);
             window.removeEventListener("scroll", handleScroll);
         }
+        // eslint-disable-next-line
     },[])
 
     //스크롤 top 컨트롤
