@@ -9,47 +9,68 @@ import {
   ListItemIcon,
   ListItem,
   List,
-  FormControl,
-  Select,
-  OutlinedInput,
-  MenuItem,
+//   FormControl,
+//   Select,
+//   OutlinedInput,
+//   MenuItem,
   Box,
-  Drawer
+  Drawer,
+  Typography,
+  Avatar,
+  Tooltip,
+  Modal
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
+import EmailIcon from '@mui/icons-material/Email';
+// import SettingsIcon from '@mui/icons-material/Settings';
 import { MenuData } from '../MenuData';
 import { theme } from '../css/SampleAppStyle';
 
 const lnbInfo = MenuData;
-const ITEM_HEIGHT = 48;
-const ITEM_PADDING_TOP = 8;
-const MenuProps = {
-PaperProps: {
-    style: {
-    maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
-    width: 120,
-    },
-},
-};
-const langNames = [
-'한국어',
-'English'
-];
+// const ITEM_HEIGHT = 48;
+// const ITEM_PADDING_TOP = 8;
+// const MenuProps = {
+// PaperProps: {
+//     style: {
+//     maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
+//     width: 120,
+//     },
+// },
+// };
+// const langNames = [
+// '한국어',
+// 'English'
+// ];
 
 
-function getStyles(name, styleName, theme) {
-return {
-    fontWeight:
-    styleName.indexOf(name) === -1
-        ? theme.typography.fontWeightRegular
-        : theme.typography.fontWeightMedium,
-};
-}
+// function getStyles(name, styleName, theme) {
+// return {
+//     fontWeight:
+//     styleName.indexOf(name) === -1
+//         ? theme.typography.fontWeightRegular
+//         : theme.typography.fontWeightMedium,
+// };
+// }
+const style = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 400,
+    bgcolor: 'background.paper',
+    border: '2px solid #000',
+    boxShadow: 24,
+    p: 4,
+    borderRadius: '5px'
+  };
 
 const HeaderWrap = () => {
+    const [open, setOpen] = React.useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
 
     // const theme = useTheme();
-    const [languageName, setLanguageName] = React.useState([]);
+    // const [languageName, setLanguageName] = React.useState([]);
     const [sideMenu, setSideMenu] = React.useState({left: false});
     const toggleDrawer = (anchor, open) => (event) => {
         if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
@@ -60,15 +81,15 @@ const HeaderWrap = () => {
       };
     
     // 다국어 select
-    const languageHandleChange = (event) => {
-      const {
-        target: { value },
-      } = event;
-      setLanguageName(
-        // On autofill we get a stringified value.
-        typeof value === 'string' ? value.split(',') : value,
-      );
-    };
+    // const languageHandleChange = (event) => {
+    //   const {
+    //     target: { value },
+    //   } = event;
+    //   setLanguageName(
+    //     // On autofill we get a stringified value.
+    //     typeof value === 'string' ? value.split(',') : value,
+    //   );
+    // };
 
     return (
         <>
@@ -125,7 +146,19 @@ const HeaderWrap = () => {
                         <h1 className='logo'>Awesome UI</h1>
                     </Link>
                 </Box>
-                <FormControl sx={{ m: 0, width: 120}} size='small'>
+                <Box sx={{display:'flex', alignItems: 'center', gap: '8px', color: theme.palette.text.secondary}}>
+                    <Avatar alt="Kim Sangjoon" src="https://avatars.githubusercontent.com/u/33441969?s=400&u=948d9cd75f6f06bd96c1e8cceffd3fa299147bdc&v=4" />
+                    <Typography sx={{fontSize: '18px'}} component='span'>Kim Sangjoon</Typography>
+                    <Tooltip title='Contact information' arrow>
+                        <IconButton sx={{border: '1px solid #ddd'}} onClick={handleOpen}>
+                            <EmailIcon />
+                        </IconButton>
+                    </Tooltip>
+                    {/*<IconButton sx={{border: '1px solid #ddd'}}>
+                        <SettingsIcon />
+                        </IconButton> */}
+                </Box>
+                {/* <FormControl sx={{ m: 0, width: 120}} size='small'>
                     <Select
                         displayEmpty
                         value={languageName}
@@ -153,9 +186,26 @@ const HeaderWrap = () => {
                         </MenuItem>
                         ))}
                     </Select>
-                </FormControl>
+                </FormControl> */}
             </Toolbar>
-            
+            <Modal
+                open={open}
+                onClose={handleClose}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description"
+            >
+                <Box sx={style}>
+                <Typography id="modal-modal-title" variant="h5" component="h2">
+                    Contact information
+                </Typography>
+                <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                    Email Address : sang1009@naver.com
+                </Typography>
+                <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                    Mobile Number : +82.10.3320.7509
+                </Typography>
+                </Box>
+            </Modal>
         </>
     );
 };

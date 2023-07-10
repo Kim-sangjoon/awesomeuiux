@@ -98,9 +98,9 @@ const MainLayoutPage = (props) => {
     const [TabValue, setTabValue] = React.useState(0); //탭컨트롤러 상태 0,1,2,3
     const sFix = 90;
     const tab01 = 0;
-    const tab02 = 475;
-    const tab03 = 895;
-    const tab04 = 1080;
+    const tab02 = 520;
+    const tab03 = 1053;
+    const tab04 = 1567;
 
     const handleTabChange = (event, newTabValue) => {
         if (newTabValue === 0) {
