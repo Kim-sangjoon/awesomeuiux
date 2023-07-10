@@ -57,146 +57,214 @@ const scope = {
 const leftComponentBox = {border: '1px solid #ddd', boxShadow: 'none', height: '400px', overflowY: 'auto', display:'flex', justifyContent: 'center', alignItems: 'center', textAlign: 'center'}
 const rightCodeBox = {border: '1px solid #ddd', boxShadow: 'none', height: '400px', backgroundColor: 'rgb(29, 31, 33)', overflowY: 'auto', textAlign: 'left'}
 const code01=` <Box sx={{ '& button': { m: 1 } }}>
-    <div>
-    <Button size="small">Small</Button>
-    <Button size="medium">Medium</Button>
-    <Button size="large">Large</Button>
-    </div>
-    <div>
-    <Button variant="outlined" size="small">
-        Small
-    </Button>
-    <Button variant="outlined" size="medium">
-        Medium
-    </Button>
-    <Button variant="outlined" size="large">
-        Large
-    </Button>
-    </div>
-    <div>
-    <Button variant="contained" size="small">
-        Small
-    </Button>
-    <Button variant="contained" size="medium">
-        Medium
-    </Button>
-    <Button variant="contained" size="large">
-        Large
-    </Button>
-    </div>
+<div>
+<Button size="small">Small</Button>
+<Button size="medium">Medium</Button>
+<Button size="large">Large</Button>
+</div>
+<div>
+<Button variant="outlined" size="small">
+    Small
+</Button>
+<Button variant="outlined" size="medium">
+    Medium
+</Button>
+<Button variant="outlined" size="large">
+    Large
+</Button>
+</div>
+<div>
+<Button variant="contained" size="small">
+    Small
+</Button>
+<Button variant="contained" size="medium">
+    Medium
+</Button>
+<Button variant="contained" size="large">
+    Large
+</Button>
+</div>
 </Box>
 `;
-const code02=`<Box sx={{display: 'flex', justifyContent: 'center'}}>
-    <FormGroup>
-        <FormControlLabel control={<Checkbox defaultChecked />} label="Label" />
-        <FormControlLabel required control={<Checkbox />} label="Required" />
-        <FormControlLabel disabled control={<Checkbox />} label="Disabled" />
-    </FormGroup>
+const code02=`<Box 
+sx={{
+display: 'flex', 
+justifyContent: 'center'}}
+>
+<FormGroup>
+<FormControlLabel 
+control={<Checkbox defaultChecked />} 
+label="Label" 
+/>
+<FormControlLabel 
+required 
+control={<Checkbox />} 
+label="Required" 
+/>
+<FormControlLabel 
+disabled 
+control={<Checkbox />} 
+label="Disabled" 
+/>
+</FormGroup>
 </Box>
 `;
 const code03=`<FormControl>
-    <FormLabel id="demo-radio-buttons-group-label">Gender</FormLabel>
-    <RadioGroup
-        aria-labelledby="demo-radio-buttons-group-label"
-        defaultValue="female"
-        name="radio-buttons-group"
-    >
-        <FormControlLabel value="female" control={<Radio />} label="Female" />
-        <FormControlLabel value="male" control={<Radio />} label="Male" />
-        <FormControlLabel value="other" control={<Radio />} label="Other" />
-    </RadioGroup>
+<FormLabel 
+id="demo-radio-buttons-group-label"
+>
+Gender
+</FormLabel>
+<RadioGroup
+aria-labelledby=
+"demo-radio-buttons-group-label"
+defaultValue="female"
+name="radio-buttons-group"
+>
+<FormControlLabel 
+value="female" 
+control={<Radio />} 
+label="Female" 
+/>
+<FormControlLabel 
+value="male" 
+control={<Radio />} 
+label="Male" 
+/>
+<FormControlLabel 
+value="other" 
+control={<Radio />} 
+label="Other" 
+/>
+</RadioGroup>
 </FormControl>
 `;
 const code04=`const Selectbox = () => {
-    const [age, setAge] = React.useState('');
+const [
+    age, 
+    setAge
+] = React.useState('');
 
-    const handleChange = (event) => {
-        setAge(event.target.value);
-    };
-    return (
-        <div>
-        <FormControl sx={{ m: 1, minWidth: 120 }} disabled>
-        <InputLabel id="demo-simple-select-disabled-label">Age</InputLabel>
-        <Select
-            labelId="demo-simple-select-disabled-label"
-            id="demo-simple-select-disabled"
-            value={age}
-            label="Age"
-            onChange={handleChange}
-        >
-            <MenuItem value="">
-            <em>None</em>
-            </MenuItem>
-            <MenuItem value={10}>Ten</MenuItem>
-            <MenuItem value={20}>Twenty</MenuItem>
-            <MenuItem value={30}>Thirty</MenuItem>
-        </Select>
-        <FormHelperText>Disabled</FormHelperText>
-        </FormControl>
-        <FormControl sx={{ m: 1, minWidth: 120 }} error>
-        <InputLabel id="demo-simple-select-error-label">Age</InputLabel>
-        <Select
-            labelId="demo-simple-select-error-label"
-            id="demo-simple-select-error"
-            value={age}
-            label="Age"
-            onChange={handleChange}
-            renderValue={value}
-        >
-            <MenuItem value="">
-            <em>None</em>
-            </MenuItem>
-            <MenuItem value={10}>Ten</MenuItem>
-            <MenuItem value={20}>Twenty</MenuItem>
-            <MenuItem value={30}>Thirty</MenuItem>
-        </Select>
-        <FormHelperText>Error</FormHelperText>
-        </FormControl>
-        <FormControl sx={{ m: 1, minWidth: 120 }}>
-        <InputLabel id="demo-simple-select-readonly-label">Age</InputLabel>
-        <Select
-            labelId="demo-simple-select-readonly-label"
-            id="demo-simple-select-readonly"
-            value={age}
-            label="Age"
-            onChange={handleChange}
-            inputProps={{ readOnly: true }}
-        >
-            <MenuItem value="">
-            <em>None</em>
-            </MenuItem>
-            <MenuItem value={10}>Ten</MenuItem>
-            <MenuItem value={20}>Twenty</MenuItem>
-            <MenuItem value={30}>Thirty</MenuItem>
-        </Select>
-        <FormHelperText>Read only</FormHelperText>
-        </FormControl>
-        <FormControl required sx={{ m: 1, minWidth: 120 }}>
-        <InputLabel id="demo-simple-select-required-label">Age</InputLabel>
-        <Select
-            labelId="demo-simple-select-required-label"
-            id="demo-simple-select-required"
-            value={age}
-            label="Age *"
-            onChange={handleChange}
-        >
-            <MenuItem value="">
-            <em>None</em>
-            </MenuItem>
-            <MenuItem value={10}>Ten</MenuItem>
-            <MenuItem value={20}>Twenty</MenuItem>
-            <MenuItem value={30}>Thirty</MenuItem>
-        </Select>
-        <FormHelperText>Required</FormHelperText>
-        </FormControl>
-        </div>
-    )
+const handleChange = (event) => {
+    setAge(event.target.value);
+};
+return (
+<div>
+<FormControl 
+sx={{ m: 1, minWidth: 120 }}
+ disabled>
+<InputLabel 
+id="demo-simple-select-disabled-label"
+>
+Age
+</InputLabel>
+<Select
+labelId=
+"demo-simple-select-disabled-label"
+id="demo-simple-select-disabled"
+value={age}
+label="Age"
+onChange={handleChange}
+>
+<MenuItem value="">
+<em>None</em>
+</MenuItem>
+<MenuItem value={10}>Ten</MenuItem>
+<MenuItem value={20}>Twenty</MenuItem>
+<MenuItem value={30}>Thirty</MenuItem>
+</Select>
+<FormHelperText>
+Disabled
+</FormHelperText>
+</FormControl>
+<FormControl 
+sx={{ m: 1, minWidth: 120 }} 
+error>
+<InputLabel 
+id="demo-simple-select-error-label">
+Age
+</InputLabel>
+<Select
+labelId="demo-simple-select-error-label"
+id="demo-simple-select-error"
+value={age}
+label="Age"
+onChange={handleChange}
+renderValue={value}
+>
+<MenuItem value="">
+<em>None</em>
+</MenuItem>
+<MenuItem value={10}>Ten</MenuItem>
+<MenuItem value={20}>Twenty</MenuItem>
+<MenuItem value={30}>Thirty</MenuItem>
+</Select>
+<FormHelperText>Error</FormHelperText>
+</FormControl>
+<FormControl sx={{ 
+    m: 1, 
+    minWidth: 120 }}>
+<InputLabel 
+id="demo-simple-select-readonly-label"
+>
+Age
+</InputLabel>
+<Select
+labelId=
+"demo-simple-select-readonly-label"
+id="demo-simple-select-readonly"
+value={age}
+label="Age"
+onChange={handleChange}
+inputProps={{ readOnly: true }}
+>
+<MenuItem value="">
+<em>None</em>
+</MenuItem>
+<MenuItem value={10}>Ten</MenuItem>
+<MenuItem value={20}>Twenty</MenuItem>
+<MenuItem value={30}>Thirty</MenuItem>
+</Select>
+<FormHelperText>
+Read only
+</FormHelperText>
+</FormControl>
+<FormControl 
+required 
+sx={{ m: 1, minWidth: 120 }}>
+<InputLabel 
+id="demo-simple-select-required-label">
+Age
+</InputLabel>
+<Select
+labelId=
+"demo-simple-select-required-label"
+id="demo-simple-select-required"
+value={age}
+label="Age *"
+onChange={handleChange}
+>
+<MenuItem value="">
+<em>None</em>
+</MenuItem>
+<MenuItem value={10}>Ten</MenuItem>
+<MenuItem value={20}>Twenty</MenuItem>
+<MenuItem value={30}>Thirty</MenuItem>
+</Select>
+<FormHelperText>
+Required
+</FormHelperText>
+</FormControl>
+</div>
+)
 }
 `;
 const code05 = `<Box
 component="form"
 sx={{
-  '& .MuiTextField-root': { m: 1, width: '33ch' },
+  '& .MuiTextField-root': { 
+    m: 1, width: '33ch' 
+},
 }}
 noValidate
 autoComplete="off"
@@ -208,7 +276,9 @@ autoComplete="off"
         defaultValue="Small"
         size="small"
     />
-    <TextField label="Size" id="outlined-size-normal" defaultValue="Normal" />
+    <TextField label="Size" 
+    id="outlined-size-normal" 
+    defaultValue="Normal" />
     </div>
     <div>
     <TextField

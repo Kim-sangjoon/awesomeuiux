@@ -61,7 +61,10 @@ const style = {
     border: '2px solid #000',
     boxShadow: 24,
     p: 4,
-    borderRadius: '5px'
+    borderRadius: '5px',
+    '@media(max-width: 600px)': {
+        width: 'calc(100vw - 20px)'
+    }
   };
 
 const HeaderWrap = () => {
