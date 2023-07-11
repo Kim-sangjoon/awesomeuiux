@@ -88,7 +88,10 @@ const code04=`<Box sx={{ flexGrow: 1 }}>
 
 const MainLayoutPage = (props) => {
     React.useEffect(()=> {
-        handleScrollTop();
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
     },[])
     const [toast, setToast] = React.useState(false);
     const handleToast = () => {

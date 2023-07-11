@@ -910,7 +910,10 @@ const BasicModal = () => {
 
 const MainComponentPage = (props) => {
     React.useEffect(()=> {
-        handleScrollTop();
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
     },[])
     const [toast, setToast] = React.useState(false);
     const handleToast = () => {

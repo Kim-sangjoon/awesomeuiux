@@ -9,6 +9,8 @@
 @font-face {font-family: 'Noto Sans KR';font-style: normal;font-weight: 900;src: url(/font/NotoSansKR-Black.otf) format('opentype');}
 
 /* reset */
+html{touch-action: pan-y !important;}
+html *{touch-action: pan-y !important;}
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button {margin:0;padding:0;font-family: 'Noto Sans KR', sans-serif;}
 fieldset,img {border:0 none}
 dl,ul,ol,menu,li {list-style:none}
