@@ -3,7 +3,8 @@ import AppsIcon from '@mui/icons-material/Apps';
 import TableViewIcon from '@mui/icons-material/TableView';
 import AnalyticsIcon from '@mui/icons-material/Analytics';
 import CodeIcon from '@mui/icons-material/Code';
-import ChatIcon from '@mui/icons-material/Chat';
+// import ChatIcon from '@mui/icons-material/Chat';
+import ApiIcon from '@mui/icons-material/Api';
 
 export const MenuData = [
   {
@@ -42,10 +43,10 @@ export const MenuData = [
     "menuNameCode":"공통코드",
   },
   {
-    "link":"/message",
+    "link":"/api",
     "selIndex":5,
     "eventNum":5,
-    "iconName":<ChatIcon />,
-    "menuNameCode":"메시지",
+    "iconName":<ApiIcon />,
+    "menuNameCode":"API",
   },
 ];

@@ -16,15 +16,15 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-const MainMessagePage = (props) => {
+const MainApiPage = (props) => {
     return (
         <>
             <Box className='contentboxwrap'>
                 <Toolbar />
                 <Box>
-                <h1>메시지</h1>
+                <h1>API</h1>
                 <h2>2Depth</h2>
-                <p className='contText'>메시지 컴포넌트</p>
+                <p className='contText'>API Docs</p>
                     <Box sx={{ flexGrow: 1 }}>
                         <Grid container spacing={2}>
                             <Grid item xs={12} md={6}>
@@ -45,4 +45,4 @@ const MainMessagePage = (props) => {
     );
 };
 
-export default MainMessagePage;
+export default MainApiPage;

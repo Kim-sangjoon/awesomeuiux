@@ -15,7 +15,7 @@ const MainComponentPage = lazy(() => import('./page/MainComponentPage'));
 const MainWebGridPage = lazy(() => import('./page/MainWebGridPage'));  
 const MainWebChartPage = lazy(() => import('./page/MainWebChartPage'));  
 const MainCommonCodePage = lazy(() => import('./page/MainCommonCodePage'));  
-const MainMessagePage = lazy(() => import('./page/MainMessagePage'));  
+const MainApiPage = lazy(() => import('./page/MainApiPage'));  
 const NotFound = lazy(() => import('./page/NotFound'));  
 
 
@@ -74,7 +74,7 @@ export default function SampleAppMain() {
             <Route path="/webgrid" element={<MainWebGridPage />}></Route>
             <Route path="/webchart" element={<MainWebChartPage />}></Route>
             <Route path="/commoncode" element={<MainCommonCodePage />}></Route>
-            <Route path="/message" element={<MainMessagePage />}></Route>
+            <Route path="/api" element={<MainApiPage />}></Route>
             <Route path="/*" element={<NotFound />}></Route>
           </Routes>
         </Suspense>
