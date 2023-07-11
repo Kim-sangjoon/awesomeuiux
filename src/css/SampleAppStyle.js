@@ -7,7 +7,10 @@ export const theme = createTheme({
   typography: {
     htmlFontSize: 16,
     fontFamily: "\"Noto Sans KR\", sans-serif",
-    inherit: 'inherit'
+    inherit: 'inherit',
+  },
+  textfield: {
+    htmlFontSize: 12
   },
   components: {
     MuiCssBaseline: {

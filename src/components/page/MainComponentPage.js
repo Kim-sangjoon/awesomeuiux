@@ -20,10 +20,46 @@ import {
   MenuItem,
   FormHelperText,
   Select,
-  TextField
+  TextField,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  IconButton,
+  Tooltip,
+  Alert,
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogContentText,
+  DialogActions,
+  Typography,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+  Pagination,
+  Modal
 } from '@mui/material';
+import TabContext from '@mui/lab/TabContext';
+import TabList from '@mui/lab/TabList';
+import TabPanel from '@mui/lab/TabPanel';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live";
 import CopyButton from '../component/CopyButton';
+import Divider from '@mui/material/Divider';
+import InboxIcon from '@mui/icons-material/Inbox';
+import DraftsIcon from '@mui/icons-material/Drafts';
+import DeleteIcon from '@mui/icons-material/Delete';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -52,9 +88,46 @@ const scope = {
     MenuItem,
     FormHelperText,
     Select,
-    TextField
+    TextField,
+    AdapterDayjs,
+    LocalizationProvider,
+    DatePicker,
+    Divider,
+    InboxIcon,
+    DraftsIcon,
+    List,
+    ListItem,
+    ListItemButton,
+    ListItemIcon,
+    ListItemText,
+    Table,
+    TableBody,
+    TableCell,
+    TableContainer,
+    TableHead,
+    TableRow,
+    createData,
+    IconButton,
+    Tooltip,
+    DeleteIcon,
+    Alert,
+    Dialog,
+    DialogTitle,
+    DialogContent,
+    DialogContentText,
+    DialogActions,
+    Typography,
+    Accordion,
+    AccordionSummary,
+    AccordionDetails,
+    ExpandMoreIcon,
+    Pagination,
+    TabContext,
+    TabList,
+    TabPanel,
+    Modal
 };
-const leftComponentBox = {border: '1px solid #ddd', boxShadow: 'none', height: '400px', overflowY: 'auto', display:'flex', justifyContent: 'center', alignItems: 'center', textAlign: 'center'}
+const leftComponentBox = {border: '1px solid #ddd', boxShadow: 'none', height: '400px', overflowY: 'auto', display:'flex', justifyContent: 'center', alignItems: 'center', textAlign: 'center', backgroundColor: 'rgb(243, 246, 249)'}
 const rightCodeBox = {border: '1px solid #ddd', boxShadow: 'none', height: '400px', backgroundColor: 'rgb(29, 31, 33)', overflowY: 'auto', textAlign: 'left'}
 const code01=` <Box sx={{ '& button': { m: 1 } }}>
 <div>
@@ -312,16 +385,292 @@ autoComplete="off"
     </div>
 </Box>
 `;
-const code06 = `<div>Coming soon</div>`;
-const code07 = `<div>Coming soon</div>`;
-const code08 = `<div>Coming soon</div>`;
-const code09 = `<div>Coming soon</div>`;
-const code10 = `<div>Coming soon</div>`;
-const code11 = `<div>Coming soon</div>`;
-const code12 = `<div>Coming soon</div>`;
-const code13 = `<div>Coming soon</div>`;
-const code14 = `<div>Coming soon</div>`;
-const code15 = `<div>Coming soon</div>`;
+const code06 = `<Box 
+sx={{ 
+    width: '100%', 
+    maxWidth: 300, 
+    bgcolor: 'background.paper',
+    display: 'inline-block'
+}}>
+<nav aria-label="main mailbox folders">
+<List>
+<ListItem disablePadding>
+<ListItemButton>
+<ListItemIcon>
+<InboxIcon />
+</ListItemIcon>
+<ListItemText primary="Inbox" />
+</ListItemButton>
+</ListItem>
+<ListItem disablePadding>
+<ListItemButton>
+<ListItemIcon>
+<DraftsIcon />
+</ListItemIcon>
+<ListItemText primary="Drafts" />
+</ListItemButton>
+</ListItem>
+</List>
+</nav>
+<Divider />
+<nav 
+aria-label="secondary 
+mailbox 
+folders">
+<List>
+<ListItem disablePadding>
+<ListItemButton>
+<ListItemText primary="Trash" />
+</ListItemButton>
+</ListItem>
+<ListItem disablePadding>
+<ListItemButton 
+component="a" 
+href="#simple-list">
+<ListItemText primary="Spam" />
+</ListItemButton>
+</ListItem>
+</List>
+</nav>
+</Box>`;
+const code07 = `<TableContainer 
+component={Paper}>
+<Table 
+sx={{ minWidth: 650 }} 
+aria-label="simple table"
+>
+<TableHead>
+<TableRow>
+<TableCell>
+Dessert (100g serving)
+</TableCell>
+<TableCell 
+align="right"
+>Calories
+</TableCell>
+<TableCell align="right">
+Fat&nbsp;(g)
+</TableCell>
+<TableCell align="right">
+Carbs&nbsp;(g)
+</TableCell>
+<TableCell align="right">
+Protein&nbsp;(g)
+</TableCell>
+</TableRow>
+</TableHead>
+<TableBody>
+{rows.map((row) => (
+<TableRow
+key={row.name}
+sx={{ '&:last-child td, 
+&:last-child th': { border: 0 } 
+}}>
+<TableCell component="th" scope="row">
+{row.name}
+</TableCell>
+<TableCell align="right">
+{row.calories}
+</TableCell>
+<TableCell align="right">
+{row.fat}
+</TableCell>
+<TableCell align="right">
+{row.carbs}
+</TableCell>
+<TableCell align="right">
+{row.protein}
+</TableCell>
+</TableRow>
+))}
+</TableBody>
+</Table>
+</TableContainer>`;
+const code08 = `<Tooltip title="Delete">
+<IconButton>
+  <DeleteIcon />
+</IconButton>
+</Tooltip>`;
+const code09 = `<Stack 
+sx={{ width: '100%' }} 
+spacing={2}>
+<Alert 
+severity="error"
+>
+This is an error alert — check it out!
+</Alert>
+<Alert 
+severity="warning"
+>
+This is a warning alert — check it out!
+</Alert>
+<Alert 
+severity="info"
+>
+This is an info alert — check it out!
+</Alert>
+<Alert 
+severity="success"
+>
+This is a success alert — check it out!
+</Alert>
+</Stack>`;
+const code10 = `
+<div>
+<Button 
+variant="outlined" 
+onClick={handleClickOpen}>
+Open alert dialog
+</Button>
+<Dialog
+open={open}
+onClose={handleClose}
+aria-labelledby=
+"alert-dialog-title"
+aria-describedby=
+"alert-dialog-description"
+>
+<DialogTitle 
+id="alert-dialog-title"
+>
+{"Use Google's location service?"}
+</DialogTitle>
+<DialogContent>
+<DialogContentText 
+id="alert-dialog-description">
+Let Google 
+help apps determine location. 
+This means sending anonymous
+location data to Google, 
+even when no apps are running.
+</DialogContentText>
+</DialogContent>
+<DialogActions>
+<Button onClick={handleClose}>
+Disagree
+</Button>
+<Button 
+onClick={handleClose} 
+autoFocus>
+Agree
+</Button>
+</DialogActions>
+</Dialog>
+</div>
+);
+}`;
+const code11 = `<div style={{textAlign: 'left'}}>
+<Accordion>
+<AccordionSummary
+expandIcon={<ExpandMoreIcon />}
+aria-controls="panel1a-content"
+id="panel1a-header"
+>
+<Typography>Accordion 1</Typography>
+</AccordionSummary>
+<AccordionDetails>
+<Typography>
+Lorem ipsum dolor sit amet, 
+consectetur adipiscing elit. 
+Suspendisse
+malesuada lacus ex, 
+sit amet blandit leo lobortis eget.
+</Typography>
+</AccordionDetails>
+</Accordion>
+<Accordion>
+<AccordionSummary
+expandIcon={<ExpandMoreIcon />}
+aria-controls="panel2a-content"
+id="panel2a-header"
+>
+<Typography>Accordion 2</Typography>
+</AccordionSummary>
+<AccordionDetails>
+<Typography>
+Lorem ipsum dolor sit amet, 
+consectetur adipiscing elit. 
+Suspendisse
+malesuada lacus ex, 
+sit amet blandit leo lobortis eget.
+</Typography>
+</AccordionDetails>
+</Accordion>
+<Accordion disabled>
+<AccordionSummary
+expandIcon={<ExpandMoreIcon />}
+aria-controls="panel3a-content"
+id="panel3a-header"
+>
+<Typography>
+Disabled Accordion
+</Typography>
+</AccordionSummary>
+</Accordion>
+</div>`;
+const code12 = `<Stack 
+spacing={2} 
+sx={{alignItems: 'center'}}>
+<Pagination count={6} />
+<Pagination count={6} color="primary" />
+<Pagination count={6} color="secondary" />
+<Pagination count={6} disabled />
+</Stack>`;
+const code13 = `<Box 
+sx={{ 
+    width: '100%', 
+    typography: 'body1' 
+}}>
+<TabContext value={value}>
+<Box sx={{ 
+    borderBottom: 1, 
+    borderColor: 'divider' 
+}}>
+<TabList 
+onChange={handleChange} 
+aria-label="lab API tabs example">
+    <Tab label="Item One" value="1" />
+    <Tab label="Item Two" value="2" />
+    <Tab label="Item Three" value="3" />
+</TabList>
+</Box>
+<TabPanel value="1">Item One</TabPanel>
+<TabPanel value="2">Item Two</TabPanel>
+<TabPanel value="3">Item Three</TabPanel>
+</TabContext>
+</Box>`;
+const code14 = `<Button 
+onClick={handleOpen}>
+Open modal
+</Button>
+<Modal
+open={open}
+onClose={handleClose}
+aria-labelledby=
+"modal-modal-title"
+aria-describedby=
+"modal-modal-description"
+>
+<Box sx={style}>
+<Typography 
+id="modal-modal-title" 
+variant="h6" 
+component="h2">
+    Text in a modal
+</Typography>
+<Typography 
+id="modal-modal-description" 
+sx={{ mt: 2 }}>
+    Duis mollis, 
+    est non commodo luctus, 
+    nisi erat porttitor ligula.
+</Typography>
+</Box>
+</Modal>`;
+const code15 = `<LocalizationProvider 
+dateAdapter={AdapterDayjs}>
+<DatePicker />
+</LocalizationProvider>`;
 const Selectbox = () => {
     const [age, setAge] = React.useState('');
 
@@ -407,6 +756,157 @@ const Selectbox = () => {
         </div>
     )
 };
+
+function createData(name, calories, fat) {
+    return { name, calories, fat };
+}
+  
+const rows = [
+createData('Frozen yoghurt', 159, 6.0),
+createData('Eclair', 262, 16.0),
+createData('Cupcake', 305, 3.7),
+createData('Gingerbread', 356, 16.0),
+];
+
+const BasicTable = () => {
+    return (
+      <TableContainer component={Paper}>
+        <Table sx={{ minWidth: 200 }} aria-label="simple table">
+          <TableHead>
+            <TableRow>
+              <TableCell>Dessert (100g serving)</TableCell>
+              <TableCell align="right">Calories</TableCell>
+              <TableCell align="right">Fat&nbsp;(g)</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {rows.map((row) => (
+              <TableRow
+                key={row.name}
+                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+              >
+                <TableCell component="th" scope="row">
+                  {row.name}
+                </TableCell>
+                <TableCell align="right">{row.calories}</TableCell>
+                <TableCell align="right">{row.fat}</TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+    );
+  }
+
+
+const AlertDialog = () => {
+    const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  return (
+    <div>
+      <Button variant="outlined" onClick={handleClickOpen}>
+        Open alert dialog
+      </Button>
+      <Dialog
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+      >
+        <DialogTitle id="alert-dialog-title">
+          {"Use Google's location service?"}
+        </DialogTitle>
+        <DialogContent>
+          <DialogContentText id="alert-dialog-description">
+            Let Google help apps determine location. This means sending anonymous
+            location data to Google, even when no apps are running.
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose}>Disagree</Button>
+          <Button onClick={handleClose} autoFocus>
+            Agree
+          </Button>
+        </DialogActions>
+      </Dialog>
+    </div>
+  );
+}
+
+const LabTabs = () => {
+    const [value, setValue] = React.useState('1');
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
+  return (
+    <Box sx={{ width: '100%', typography: 'body1' }}>
+      <TabContext value={value}>
+        <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+          <TabList onChange={handleChange} aria-label="lab API tabs example">
+            <Tab label="Item One" value="1" />
+            <Tab label="Item Two" value="2" />
+            <Tab label="Item Three" value="3" />
+          </TabList>
+        </Box>
+        <TabPanel value="1">Item One</TabPanel>
+        <TabPanel value="2">Item Two</TabPanel>
+        <TabPanel value="3">Item Three</TabPanel>
+      </TabContext>
+    </Box>
+  );
+}
+
+const modalStyle = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 400,
+    bgcolor: 'background.paper',
+    border: '2px solid #000',
+    boxShadow: 24,
+    p: 4,
+    '@media(max-width: 600px)': {
+        width: 'calc(100vw - 20px)'
+    }
+  };
+
+const BasicModal = () => {
+    const [open, setOpen] = React.useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
+
+  return (
+    <div>
+      <Button onClick={handleOpen}>Open modal</Button>
+      <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={modalStyle}>
+          <Typography id="modal-modal-title" variant="h6" component="h2">
+            Text in a modal
+          </Typography>
+          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+          </Typography>
+        </Box>
+      </Modal>
+    </div>
+  );
+}
 
 const MainComponentPage = (props) => {
     React.useEffect(()=> {
@@ -749,13 +1249,14 @@ const MainComponentPage = (props) => {
                                 <LiveProvider code={code07} scope={scope}>
                                     <Grid item xs={12} md={6}>
                                         <Item sx={leftComponentBox}>
-                                            <LivePreview />
-                                            <LiveError />
+                                            {/* <LivePreview />
+                                            <LiveError /> */}
+                                            <BasicTable />
                                         </Item>
                                     </Grid>
                                     <Grid item xs={12} md={6} sx={{position: 'relative'}}>
                                         <Item sx={rightCodeBox}>
-                                            <LiveEditor />
+                                            <LiveEditor disabled />
                                         </Item>
                                         <CopyButton onClick={handleToast} code={code07} />
                                     </Grid>
@@ -815,13 +1316,14 @@ const MainComponentPage = (props) => {
                                 <LiveProvider code={code10} scope={scope}>
                                     <Grid item xs={12} md={6}>
                                         <Item sx={leftComponentBox}>
-                                            <LivePreview />
-                                            <LiveError />
+                                            {/* <LivePreview />
+                                            <LiveError /> */}
+                                            <AlertDialog />
                                         </Item>
                                     </Grid>
                                     <Grid item xs={12} md={6} sx={{position: 'relative'}}>
                                         <Item sx={rightCodeBox}>
-                                            <LiveEditor />
+                                            <LiveEditor disabled />
                                         </Item>
                                         <CopyButton onClick={handleToast} code={code10} />
                                     </Grid>
@@ -881,13 +1383,14 @@ const MainComponentPage = (props) => {
                                 <LiveProvider code={code13} scope={scope}>
                                     <Grid item xs={12} md={6}>
                                         <Item sx={leftComponentBox}>
-                                            <LivePreview />
-                                            <LiveError />
+                                            {/* <LivePreview />
+                                            <LiveError /> */}
+                                            <LabTabs />
                                         </Item>
                                     </Grid>
                                     <Grid item xs={12} md={6} sx={{position: 'relative'}}>
                                         <Item sx={rightCodeBox}>
-                                            <LiveEditor />
+                                            <LiveEditor disabled/>
                                         </Item>
                                         <CopyButton onClick={handleToast} code={code13} />
                                     </Grid>
@@ -903,13 +1406,14 @@ const MainComponentPage = (props) => {
                                 <LiveProvider code={code14} scope={scope}>
                                     <Grid item xs={12} md={6}>
                                         <Item sx={leftComponentBox}>
-                                            <LivePreview />
-                                            <LiveError />
+                                            {/* <LivePreview />
+                                            <LiveError /> */}
+                                            <BasicModal />
                                         </Item>
                                     </Grid>
                                     <Grid item xs={12} md={6} sx={{position: 'relative'}}>
                                         <Item sx={rightCodeBox}>
-                                            <LiveEditor />
+                                            <LiveEditor disabled/>
                                         </Item>
                                         <CopyButton onClick={handleToast} code={code14} />
                                     </Grid>
