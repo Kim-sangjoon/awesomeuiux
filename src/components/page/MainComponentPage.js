@@ -34,6 +34,7 @@ import {
   TableRow,
   IconButton,
   Tooltip,
+  ClickAwayListener,
   Alert,
   Dialog,
   DialogTitle,
@@ -109,6 +110,7 @@ const scope = {
     createData,
     IconButton,
     Tooltip,
+    ClickAwayListener,
     DeleteIcon,
     Alert,
     Dialog,
@@ -486,11 +488,50 @@ sx={{ '&:last-child td,
 </TableBody>
 </Table>
 </TableContainer>`;
-const code08 = `<Tooltip title="Delete">
-<IconButton>
-  <DeleteIcon />
-</IconButton>
-</Tooltip>`;
+const code08 = `<div>
+<Grid container justifyContent="center">
+<Grid item>
+<Tooltip disableFocusListener title="Add">
+<Button>Hover or touch</Button>
+</Tooltip>
+</Grid>
+<Grid item>
+<Tooltip disableHoverListener title="Add">
+<Button>Focus or touch</Button>
+</Tooltip>
+</Grid>
+<Grid item>
+<Tooltip 
+disableFocusListener 
+disableTouchListener title="Add">
+<Button>Hover</Button>
+</Tooltip>
+</Grid>
+<Grid item>
+<ClickAwayListener 
+onClickAway={handleTooltipClose}>
+<div>
+<Tooltip
+PopperProps={{
+disablePortal: true,
+}}
+onClose={handleTooltipClose}
+open={open}
+disableFocusListener
+disableHoverListener
+disableTouchListener
+title="Add"
+>
+<Button 
+onClick={handleTooltipOpen}>
+Click</Button>
+</Tooltip>
+</div>
+</ClickAwayListener>
+</Grid>
+</Grid>
+</div>
+`;
 const code09 = `<Stack 
 sx={{ width: '100%' }} 
 spacing={2}>
@@ -908,6 +949,58 @@ const BasicModal = () => {
   );
 }
 
+const TriggersTooltips = () => {
+  const [open, setOpen] = React.useState(false);
+
+  const handleTooltipClose = () => {
+    setOpen(false);
+  };
+
+  const handleTooltipOpen = () => {
+    setOpen(true);
+  };
+  return (
+    <div>
+      <Grid container justifyContent="center">
+        <Grid item>
+          <Tooltip disableFocusListener title="Add">
+            <Button>Hover or touch</Button>
+          </Tooltip>
+        </Grid>
+        <Grid item>
+          <Tooltip disableHoverListener title="Add">
+            <Button>Focus or touch</Button>
+          </Tooltip>
+        </Grid>
+        <Grid item>
+          <Tooltip disableFocusListener disableTouchListener title="Add">
+            <Button>Hover</Button>
+          </Tooltip>
+        </Grid>
+        <Grid item>
+          <ClickAwayListener onClickAway={handleTooltipClose}>
+            <div>
+              <Tooltip
+                PopperProps={{
+                  disablePortal: true,
+                }}
+                onClose={handleTooltipClose}
+                open={open}
+                disableFocusListener
+                disableHoverListener
+                disableTouchListener
+                title="Add"
+              >
+                <Button onClick={handleTooltipOpen}>Click</Button>
+              </Tooltip>
+            </div>
+          </ClickAwayListener>
+        </Grid>
+      </Grid>
+    </div>
+  );
+}
+
 const MainComponentPage = (props) => {
     React.useEffect(()=> {
         window.scrollTo({
@@ -1275,13 +1368,14 @@ const MainComponentPage = (props) => {
                                 <LiveProvider code={code08} scope={scope}>
                                     <Grid item xs={12} md={6}>
                                         <Item sx={leftComponentBox}>
-                                            <LivePreview />
-                                            <LiveError />
+                                            {/* <LivePreview />
+                                            <LiveError /> */}
+                                            <TriggersTooltips />
                                         </Item>
                                     </Grid>
                                     <Grid item xs={12} md={6} sx={{position: 'relative'}}>
                                         <Item sx={rightCodeBox}>
-                                            <LiveEditor />
+                                            <LiveEditor disabled/>
                                         </Item>
                                         <CopyButton onClick={handleToast} code={code08} />
                                     </Grid>
