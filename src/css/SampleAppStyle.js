@@ -15,7 +15,7 @@ export const theme = createTheme({
   components: {
     MuiCssBaseline: {
       styleOverrides: `
-        html{touch-action: pan-y !important;}
+        html,body{touch-action: pan-y}
         .sampleApp * {
             font-family: 'Noto Sans KR', sans-serif;
         }
