@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-sample-app/static/css/main.a75b8b8b.css",
-    "main.js": "/react-sample-app/static/js/main.d651258f.js",
+    "main.js": "/react-sample-app/static/js/main.c7b9f72b.js",
     "static/js/152.0c7307fb.chunk.js": "/react-sample-app/static/js/152.0c7307fb.chunk.js",
     "static/js/92.327d0536.chunk.js": "/react-sample-app/static/js/92.327d0536.chunk.js",
     "static/js/112.4d122295.chunk.js": "/react-sample-app/static/js/112.4d122295.chunk.js",
@@ -24,7 +24,7 @@
     "static/media/NotoSansKR-Thin.otf": "/react-sample-app/static/media/NotoSansKR-Thin.a3e74b5ef0ed5ab193f5.otf",
     "index.html": "/react-sample-app/index.html",
     "main.a75b8b8b.css.map": "/react-sample-app/static/css/main.a75b8b8b.css.map",
-    "main.d651258f.js.map": "/react-sample-app/static/js/main.d651258f.js.map",
+    "main.c7b9f72b.js.map": "/react-sample-app/static/js/main.c7b9f72b.js.map",
     "152.0c7307fb.chunk.js.map": "/react-sample-app/static/js/152.0c7307fb.chunk.js.map",
     "92.327d0536.chunk.js.map": "/react-sample-app/static/js/92.327d0536.chunk.js.map",
     "112.4d122295.chunk.js.map": "/react-sample-app/static/js/112.4d122295.chunk.js.map",
@@ -42,6 +42,6 @@
   },
   "entrypoints": [
     "static/css/main.a75b8b8b.css",
-    "static/js/main.d651258f.js"
+    "static/js/main.c7b9f72b.js"
   ]
 }
