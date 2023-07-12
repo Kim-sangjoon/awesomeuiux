@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunksampleapp=self.webpackChunksampleapp||[]).push([[345],{2345:function(s,e,n){n.r(e);n(2791);var r=n(4554),a=n(4663),c=n(184);e.default=function(s){return(0,c.jsx)(c.Fragment,{children:(0,c.jsx)(r.Z,{className:"contentboxwrap",children:(0,c.jsxs)(r.Z,{children:[(0,c.jsx)(a.Z,{}),(0,c.jsxs)("h1",{children:["NotFound ",(0,c.jsx)("br",{}),"404 Error"]})]})})})}}}]);
-//# sourceMappingURL=345.c7f99a90.chunk.js.map
