@@ -69,7 +69,15 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-### A
+### Awesome UI 설치
+```
+npm run setup
+```
+
+### Awesome UI 실행
+```
+npm run sample-web:start
+```
 
 ### 스토리북 설치
 ```
