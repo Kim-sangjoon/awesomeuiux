@@ -68,3 +68,20 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### A
+
+### 스토리북 설치
+```
+npx storybook@latest init
+``` 
+
+### 스토리북 빌드
+```
+npm run build-storybook
+```
+
+### 로컬 서버 실행 테스트(스토리북) 
+```
+npx http-server ./storybook-static
+```
