@@ -31,5 +31,10 @@ npm run build-storybook
 npx http-server ./storybook-static
 ```
 
+### Chromatic CLI 설치
+```
+npm install chromatic --save-dev
+```
+
 
 
