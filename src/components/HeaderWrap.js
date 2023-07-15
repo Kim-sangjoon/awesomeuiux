@@ -118,13 +118,13 @@ const HeaderWrap = () => {
                     open={sideMenu['left']}
                     onClose={toggleDrawer('left', false)}
                     sx={{'& .MuiDrawer-paper': {
-                        width: 220,
+                        width: 200,
                         boxSizing: 'border-box',
-                        paddingTop: '5px',
+                        paddingTop: 1,
                     }
                     }}
                 >
-                    <Box sx={{marginTop:'5px', marginLeft: '35px'}}><img src={logoImg} alt='logo' width={150} height='auto' /></Box>
+                    <Box sx={{marginTop:'8px', marginLeft: '25px'}}><img src={logoImg} alt='logo' width={150} height='auto' /></Box>
                     <List sx={{p:0}}>
                         {lnbInfo.map((item, index) => (
                             <Link key={index} to={item.link}>
