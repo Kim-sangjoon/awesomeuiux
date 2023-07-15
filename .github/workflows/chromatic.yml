@@ -27,5 +27,5 @@ jobs:
 
       - name: Publish to Chromatic
         env:
-          CHROMATIC_PROJECT_TOKEN: ${{ secrets.chpt_b45517c6f69c9ce }}
-        run: npx chromatic --project-token="${chpt_b45517c6f69c9ce}"
+          CHROMATIC_PROJECT_TOKEN: secrets.chpt_b45517c6f69c9ce
+        run: npx chromatic --project-token=chpt_b45517c6f69c9ce
