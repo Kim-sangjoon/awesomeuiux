@@ -25,6 +25,7 @@ import EmailIcon from '@mui/icons-material/Email';
 // import SettingsIcon from '@mui/icons-material/Settings';
 import { MenuData } from '../MenuData';
 import { theme } from '../css/SampleAppStyle';
+import logoImg from "../images/logo-awesome.svg";
 
 const lnbInfo = MenuData;
 // const ITEM_HEIGHT = 48;
@@ -117,12 +118,13 @@ const HeaderWrap = () => {
                     open={sideMenu['left']}
                     onClose={toggleDrawer('left', false)}
                     sx={{'& .MuiDrawer-paper': {
-                        width: 200,
+                        width: 220,
                         boxSizing: 'border-box',
-                        paddingTop: 5,
+                        paddingTop: '5px',
                     }
                     }}
                 >
+                    <Box sx={{marginTop:'5px', marginLeft: '35px'}}><img src={logoImg} alt='logo' width={150} height='auto' /></Box>
                     <List sx={{p:0}}>
                         {lnbInfo.map((item, index) => (
                             <Link key={index} to={item.link}>
@@ -146,7 +148,7 @@ const HeaderWrap = () => {
                         paddingLeft: '10px'
                 }}}>
                     <Link to='/'>
-                        <h1 className='logo'>Awesome UI</h1>
+                        <Box sx={{marginTop:'8px'}}><img src={logoImg} alt='logo' width={150} height='auto' /></Box>
                     </Link>
                 </Box>
                 <Box sx={{display:'flex', alignItems: 'center', gap: '8px', color: theme.palette.text.secondary}}>

@@ -10,6 +10,7 @@ import {
   ListItemText
 } from '@mui/material';
 import { MenuData } from "../MenuData";
+import logoImg from "../images/logo-awesome.svg";
 
 
 const LnbArea = (props) => {
@@ -25,7 +26,7 @@ const LnbArea = (props) => {
       <Toolbar sx={{justifyContent: 'center'}}>
         <Box>
             <Link to='/'>
-              <h1 className='logo'>Awesome UI</h1>
+              <Box sx={{marginTop:'8px'}}><img src={logoImg} alt='logo' width={150} height='auto' /></Box>
             </Link>
         </Box>
       </Toolbar>
