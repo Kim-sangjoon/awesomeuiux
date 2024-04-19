@@ -11,6 +11,11 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+    - name: Set up Git user
+      run: |
+        git config --global user.name 'Kim Sang Joon'
+        git config --global user.email 'sang1009@naver.com'
+
     - name: Deploy1
       run: chmod +x ./deploy_script.sh
 
