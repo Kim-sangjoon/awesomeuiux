@@ -22,6 +22,3 @@ jobs:
 
     - name: Build
       run: npm run build
-      
-    - name: gh-pages-build
-      run: gh-pages -d build
