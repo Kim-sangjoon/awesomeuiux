@@ -16,6 +16,11 @@ npm run setup
 npm run sample-web:start
 ```
 
+### Awesome UI 배포
+```
+npm run deploy
+```
+
 ### 스토리북 설치
 ```
 npx storybook@latest init
