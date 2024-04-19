@@ -26,7 +26,7 @@ Prism.highlightAll();
 
 export default function SampleAppMain() {
   return (
-    <BrowserRouter basename='/react-sample-app'>
+    <BrowserRouter basename='/awesomeuiux'>
       <Box className='sampleApp' sx={{ display: 'flex' }}>
         <AppBar
           position="fixed"
