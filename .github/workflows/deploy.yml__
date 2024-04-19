@@ -23,5 +23,5 @@ jobs:
     - name: Build
       run: npm run build
 
-    - name: Deploy
-      run: ./deploy_script.sh
+    # - name: Deploy
+    #   run: ./deploy_script.sh
