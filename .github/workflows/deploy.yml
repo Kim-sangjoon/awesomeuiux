@@ -3,7 +3,7 @@ name: Build and Deploy
 on:
   push:
     branches:
-      - master  # 또는 프로젝트의 기본 브랜치명에 맞게 조정
+      - master  # 트리거 브랜치
 
 jobs:
   build:
@@ -15,18 +15,17 @@ jobs:
     - name: Setup Node
       uses: actions/setup-node@v2
       with:
-        node-version: '14'  # 또는 프로젝트에 맞는 다른 LTS 버전
+        node-version: '14'  # 필요한 Node.js 버전
 
     - name: Install Dependencies
       run: npm install --legacy-peer-deps
 
     - name: Build
-      run: npm run build
+      run: npm run build  # 프로젝트 빌드
 
-    # 깃허브 페이지 배포는 좀더 알아보고 시도 해야할듯 ㅠㅠ
-
-    # - name: Deploy to GitHub Pages
-    #   uses: JamesIves/github-pages-deploy-action@4.1.0  # 최신 버전으로 업데이트 가능
-    #   with:
-    #     branch: gh-pages  # 배포될 브랜치
-    #     folder: build      # 배포될 폴더
+    - name: Deploy
+      uses: JamesIves/github-pages-deploy-action@4.1.4
+      with:
+        branch: gh-pages  # 배포할 브랜치
+        folder: build  # 빌드된 파일이 있는 디렉토리
+        token: ${{ secrets.GITHUB_TOKEN }}
