@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunksampleapp=self.webpackChunksampleapp||[]).push([[710],{8329:(s,e,r)=>{r.r(e),r.d(e,{default:()=>l});r(5043);var a=r(6446),n=r(5263),c=r(579);const l=s=>(0,c.jsx)(c.Fragment,{children:(0,c.jsx)(a.A,{className:"contentboxwrap",children:(0,c.jsxs)(a.A,{children:[(0,c.jsx)(n.A,{}),(0,c.jsxs)("h1",{children:["NotFound ",(0,c.jsx)("br",{}),"404 Error"]})]})})})}}]);
+//# sourceMappingURL=710.ccf5f8ee.chunk.js.map
