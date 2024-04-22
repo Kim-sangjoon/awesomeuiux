@@ -124,7 +124,7 @@ const HeaderWrap = () => {
                     }
                     }}
                 >
-                    <Box sx={{marginTop:'8px', marginLeft: '25px'}}><img src={logoImg} alt='logo' width={150} height='auto' /></Box>
+                    <Box sx={{marginTop:'8px', marginLeft: '25px'}}><img src={logoImg} alt='awesomeuiux logo' width={150} height='auto' /></Box>
                     <List sx={{p:0}}>
                         {lnbInfo.map((item, index) => (
                             <Link key={index} to={item.link}>
@@ -148,7 +148,7 @@ const HeaderWrap = () => {
                         paddingLeft: '10px'
                 }}}>
                     <Link to='/'>
-                        <Box sx={{marginTop:'8px'}}><img src={logoImg} alt='logo' width={150} height='auto' /></Box>
+                        <Box sx={{marginTop:'8px'}}><img src={logoImg} alt='awesomeuiux logo' width={150} height='auto' /></Box>
                     </Link>
                 </Box>
                 <Box sx={{display:'flex', alignItems: 'center', gap: '8px', color: theme.palette.text.secondary}}>
