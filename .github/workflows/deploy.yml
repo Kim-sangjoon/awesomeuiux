@@ -3,7 +3,7 @@ name: Build and Deploy
 on:
   push:
     branches:
-      - main  # 또는 프로젝트의 기본 브랜치명에 맞게 조정
+      - master  # 또는 프로젝트의 기본 브랜치명에 맞게 조정
 
 jobs:
   build:
