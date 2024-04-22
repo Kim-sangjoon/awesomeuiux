@@ -1,0 +1,30 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - main  # 또는 프로젝트의 기본 브랜치명에 맞게 조정
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup Node
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'  # 또는 프로젝트에 맞는 다른 LTS 버전
+
+    - name: Install Dependencies
+      run: npm install --legacy-peer-deps
+
+    - name: Build
+      run: npm run build
+
+    - name: Deploy to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@4.1.0  # 최신 버전으로 업데이트 가능
+      with:
+        branch: gh-pages  # 배포될 브랜치
+        folder: build      # 배포될 폴더
