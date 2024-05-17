@@ -48,6 +48,7 @@ export const theme = createTheme({
         .sampleApp h2{color: #919191;}
         .sampleApp .fc-red{color: #ff6233;}
         .sampleApp .page-loading{width: 60px !important; height: 60px !important}
+        .sampleApp .MuiPopper-root{z-index:1;}
 
         
         @media (max-width: 1200px) {
