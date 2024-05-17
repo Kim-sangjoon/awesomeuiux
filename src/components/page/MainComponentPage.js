@@ -1181,28 +1181,28 @@ const MainComponentPage = (props) => {
         })
     }
 
+    const tabLabels = [
+        "Button", "Checkbox", "Radio Group", "Select", "Text Field",
+        "List", "Table", "Tooltip", "Alert", "Dialog",
+        "Accordion", "Pagination", "Tabs", "Modal", "Date Pickers"
+      ];
+
     return (
         <>
             <Box className='contentboxwrap'>
                 <Toolbar />
                 <Box>
                     <h1>컴포넌트</h1>
-                    <Tabs className='contentTab' ref={tabRef} value={TabValue} variant="scrollable" scrollButtons="auto" onChange={handleTabChange} sx={{backgroundColor: 'rgb(255 255 255 / 60%)'}}>
-                        <Tab label="Button" />
-                        <Tab label="Checkbox" />
-                        <Tab label="Radio Group" />
-                        <Tab label="Select" />
-                        <Tab label="Text Field" />
-                        <Tab label="List" />
-                        <Tab label="Table" />
-                        <Tab label="Tooltip" />
-                        <Tab label="Alert" />
-                        <Tab label="Dialog" />
-                        <Tab label="Accordion" />
-                        <Tab label="Pagination" />
-                        <Tab label="Tabs" />
-                        <Tab label="Modal" />
-                        <Tab label="Date Pickers" />
+                    <Tabs
+                        className='contentTab'
+                        ref={tabRef}
+                        value={TabValue}
+                        variant="scrollable"
+                        scrollButtons="auto"
+                        onChange={handleTabChange}
+                        sx={{backgroundColor: 'rgb(255 255 255 / 60%)'}}
+                    >
+                        {tabLabels.map(label => <Tab key={label} label={label} />)}
                     </Tabs>
                     <Box className='tab-item'>
                         <h2>버튼</h2>
