@@ -154,12 +154,12 @@ const HeaderWrap = () => {
                 <Box sx={{display:'flex', alignItems: 'center', gap: '8px', color: theme.palette.text.secondary}}>
                     <Tooltip title='Go to github' arrow>
                         <a href="https://github.com/Kim-sangjoon/awesomeuiux" target="_blank" rel="noopener noreferrer">
-                            <Avatar sx={{border: '1px solid #ddd'}} alt="Kim Sangjoon" src="https://avatars.githubusercontent.com/u/33441969?s=400&u=948d9cd75f6f06bd96c1e8cceffd3fa299147bdc&v=4" />
+                            <Avatar sx={{border: '1px solid #ddd', width:'32px', height:'32px'}} alt="Kim Sangjoon" src="https://avatars.githubusercontent.com/u/33441969?s=400&u=948d9cd75f6f06bd96c1e8cceffd3fa299147bdc&v=4" />
                         </a>
                     </Tooltip>
-                    <Typography sx={{fontSize: '18px', '@media(max-width: 600px)': {display: 'none'}}} component='span'>Kim Sangjoon</Typography>
+                    <Typography sx={{fontSize: '16px', '@media(max-width: 600px)': {display: 'none'}}} component='span'>Kim Sangjoon</Typography>
                     <Tooltip title='Contact information' arrow>
-                        <IconButton sx={{border: '1px solid #ddd'}} onClick={handleOpen}>
+                        <IconButton sx={{border: '1px solid #ddd', padding:'5px'}} onClick={handleOpen}>
                             <EmailIcon />
                         </IconButton>
                     </Tooltip>
