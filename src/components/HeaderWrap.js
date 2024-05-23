@@ -124,7 +124,7 @@ const HeaderWrap = () => {
                     }
                     }}
                 >
-                    <Box sx={{marginTop:'8px', marginLeft: '25px'}}><img src={logoImg} alt='awesomeuiux logo' width={150} height='auto' /></Box>
+                    <Box sx={{paddingTop:'8px', paddingLeft: '16px', paddingBottom: '12px', marginBottom: '16px', borderBottom: '1px solid #dbdbdb'}}><img src={logoImg} alt='awesomeuiux logo' width={150} height='auto' /></Box>
                     <List sx={{p:0}}>
                         {lnbInfo.map((item, index) => (
                             <Link key={index} to={item.link}>
