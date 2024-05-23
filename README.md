@@ -1,4 +1,4 @@
-# Getting Started with Awesome UI
+# Getting Started with Awesome UX
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -6,17 +6,17 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-### Awesome UI 모듈설치
+### Awesome UX 모듈설치
 ```
 npm run setup
 ```
 
-### Awesome UI 실행
+### Awesome UX 실행
 ```
 npm run sample-web:start
 ```
 
-### Awesome UI 배포
+### Awesome UX 배포
 ```
 npm run deploy
 ```
@@ -28,7 +28,7 @@ npx storybook@latest init
 
 ### 스토리북 빌드
 ```
-npm run build-storybook
+npm run bUXld-storybook
 ```
 
 ### 로컬 서버 실행 테스트(스토리북) 
