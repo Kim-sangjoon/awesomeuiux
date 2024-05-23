@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/awesomeuiux/static/css/main.35f617e2.css",
-    "main.js": "/awesomeuiux/static/js/main.54f4169b.js",
+    "main.js": "/awesomeuiux/static/js/main.da571dbc.js",
     "static/js/897.abb90679.chunk.js": "/awesomeuiux/static/js/897.abb90679.chunk.js",
     "static/js/394.1bdc7b5e.chunk.js": "/awesomeuiux/static/js/394.1bdc7b5e.chunk.js",
     "static/js/231.3ae1785a.chunk.js": "/awesomeuiux/static/js/231.3ae1785a.chunk.js",
@@ -26,7 +26,7 @@
     "static/media/logo-awesome.svg": "/awesomeuiux/static/media/logo-awesome.5984a23ceb2572873e5ae80482aaad83.svg",
     "index.html": "/awesomeuiux/index.html",
     "main.35f617e2.css.map": "/awesomeuiux/static/css/main.35f617e2.css.map",
-    "main.54f4169b.js.map": "/awesomeuiux/static/js/main.54f4169b.js.map",
+    "main.da571dbc.js.map": "/awesomeuiux/static/js/main.da571dbc.js.map",
     "897.abb90679.chunk.js.map": "/awesomeuiux/static/js/897.abb90679.chunk.js.map",
     "394.1bdc7b5e.chunk.js.map": "/awesomeuiux/static/js/394.1bdc7b5e.chunk.js.map",
     "231.3ae1785a.chunk.js.map": "/awesomeuiux/static/js/231.3ae1785a.chunk.js.map",
@@ -45,6 +45,6 @@
   },
   "entrypoints": [
     "static/css/main.35f617e2.css",
-    "static/js/main.54f4169b.js"
+    "static/js/main.da571dbc.js"
   ]
 }
