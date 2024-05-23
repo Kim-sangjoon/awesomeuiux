@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/awesomeuiux/static/css/main.35f617e2.css",
-    "main.js": "/awesomeuiux/static/js/main.53ef38e1.js",
+    "main.js": "/awesomeuiux/static/js/main.1b3fadce.js",
     "static/js/897.abb90679.chunk.js": "/awesomeuiux/static/js/897.abb90679.chunk.js",
     "static/js/394.1bdc7b5e.chunk.js": "/awesomeuiux/static/js/394.1bdc7b5e.chunk.js",
     "static/js/231.3ae1785a.chunk.js": "/awesomeuiux/static/js/231.3ae1785a.chunk.js",
@@ -23,10 +23,10 @@
     "static/media/NotoSansKR-Regular.otf": "/awesomeuiux/static/media/NotoSansKR-Regular.e1aa54c04a18648e6468.otf",
     "static/media/NotoSansKR-Light.otf": "/awesomeuiux/static/media/NotoSansKR-Light.636ff9b51e826a733c3d.otf",
     "static/media/NotoSansKR-Thin.otf": "/awesomeuiux/static/media/NotoSansKR-Thin.a3e74b5ef0ed5ab193f5.otf",
-    "static/media/logo-awesome.svg": "/awesomeuiux/static/media/logo-awesome.8d1ccffa13170a3c8b5cd6c7ed612055.svg",
+    "static/media/logo-awesome.svg": "/awesomeuiux/static/media/logo-awesome.5984a23ceb2572873e5ae80482aaad83.svg",
     "index.html": "/awesomeuiux/index.html",
     "main.35f617e2.css.map": "/awesomeuiux/static/css/main.35f617e2.css.map",
-    "main.53ef38e1.js.map": "/awesomeuiux/static/js/main.53ef38e1.js.map",
+    "main.1b3fadce.js.map": "/awesomeuiux/static/js/main.1b3fadce.js.map",
     "897.abb90679.chunk.js.map": "/awesomeuiux/static/js/897.abb90679.chunk.js.map",
     "394.1bdc7b5e.chunk.js.map": "/awesomeuiux/static/js/394.1bdc7b5e.chunk.js.map",
     "231.3ae1785a.chunk.js.map": "/awesomeuiux/static/js/231.3ae1785a.chunk.js.map",
@@ -45,6 +45,6 @@
   },
   "entrypoints": [
     "static/css/main.35f617e2.css",
-    "static/js/main.53ef38e1.js"
+    "static/js/main.1b3fadce.js"
   ]
 }
