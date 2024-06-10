@@ -92,6 +92,7 @@ const MainLayoutPage = (props) => {
             top: 0,
             behavior: "smooth"
         });
+        return () => {}
     },[])
     const [toast, setToast] = React.useState(false);
     const handleToast = () => {
@@ -180,17 +181,24 @@ const MainLayoutPage = (props) => {
         });
     }
 
+    const tabLabels = ["분할 샘플", "2분할", "3분할", "4분할"];
+
     return (
         <>
             <Box className='contentboxwrap'>
                 <Toolbar />
                 <Box>
                     <h1>레이아웃</h1>
-                    <Tabs className='contentTab' ref={tabRef} value={TabValue} variant="scrollable" scrollButtons="auto" onChange={handleTabChange} sx={{backgroundColor: 'rgb(255 255 255 / 60%)'}}>
-                        <Tab label="분할 샘플" />
-                        <Tab label="2분할" />
-                        <Tab label="3분할" />
-                        <Tab label="4분할" />
+                    <Tabs 
+                        className='contentTab' 
+                        ref={tabRef} 
+                        value={TabValue} 
+                        variant="scrollable" 
+                        scrollButtons="auto" 
+                        onChange={handleTabChange} 
+                        sx={{backgroundColor: 'rgb(255 255 255 / 60%)'}}
+                    >
+                        {tabLabels.map(label => <Tab key={label} label={label} />)}
                     </Tabs>
                     <Box className='tab-item'>
                         <h2>분할 샘플(반응형)</h2>
