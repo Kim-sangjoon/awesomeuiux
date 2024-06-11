@@ -130,7 +130,7 @@ const HeaderWrap = () => {
                             <Link key={index} to={item.link}>
                                 <ListItem sx={{p:0}} onClick={toggleDrawer('left', false)}>
                                     <ListItemButton>
-                                        <ListItemIcon>
+                                        <ListItemIcon sx={{minWidth: "40px",marginLeft: "10px"}}>
                                             {item.iconName}
                                         </ListItemIcon>
                                         <ListItemText primary={item.menuNameCode} />

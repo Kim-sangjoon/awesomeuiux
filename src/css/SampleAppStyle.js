@@ -23,7 +23,6 @@ export const theme = createTheme({
         *::-webkit-scrollbar-thumb{height: 30%; background: #999; border-radius: 8px}
         *::-webkit-scrollbar-track{background: rgba(0,0,0,0.2); border-radius: 8px}
         .sampleApp .MuiTypography-root{font-family: 'Noto Sans KR', sans-serif;}
-        .sampleApp .css-cveggr-MuiListItemIcon-root{min-width: 40px; margin-left: 12px;}
         .sampleApp h1.logo{
           font-size: 1.5rem;
           color: #1490ef;

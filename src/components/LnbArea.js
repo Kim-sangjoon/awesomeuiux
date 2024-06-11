@@ -35,7 +35,7 @@ const LnbArea = (props) => {
           <Link key={index} to={item.link}>
             <ListItem sx={{p:0}} selected={selectedIndex === item.selIndex} onClick={(event) => handleListItemClick(event, item.eventNum)}>
               <ListItemButton>
-                <ListItemIcon>
+                <ListItemIcon sx={{minWidth: "40px",marginLeft: "10px"}}>
                   {item.iconName}
                 </ListItemIcon>
                 <ListItemText primary={item.menuNameCode} />
