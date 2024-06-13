@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/awesomeuiux/static/css/main.35f617e2.css",
-    "main.js": "/awesomeuiux/static/js/main.890b54ad.js",
+    "main.js": "/awesomeuiux/static/js/main.063def1a.js",
     "static/js/897.4776dabb.chunk.js": "/awesomeuiux/static/js/897.4776dabb.chunk.js",
     "static/js/394.1bdc7b5e.chunk.js": "/awesomeuiux/static/js/394.1bdc7b5e.chunk.js",
     "static/js/231.3ae1785a.chunk.js": "/awesomeuiux/static/js/231.3ae1785a.chunk.js",
@@ -13,9 +13,9 @@
     "static/js/163.0a962dcb.chunk.js": "/awesomeuiux/static/js/163.0a962dcb.chunk.js",
     "static/js/216.e8499622.chunk.js": "/awesomeuiux/static/js/216.e8499622.chunk.js",
     "static/js/131.fd245859.chunk.js": "/awesomeuiux/static/js/131.fd245859.chunk.js",
-    "static/js/862.85e2429f.chunk.js": "/awesomeuiux/static/js/862.85e2429f.chunk.js",
+    "static/js/862.5c5c6a06.chunk.js": "/awesomeuiux/static/js/862.5c5c6a06.chunk.js",
     "static/js/568.5bed09d0.chunk.js": "/awesomeuiux/static/js/568.5bed09d0.chunk.js",
-    "static/js/941.9f3c3feb.chunk.js": "/awesomeuiux/static/js/941.9f3c3feb.chunk.js",
+    "static/js/941.e240d892.chunk.js": "/awesomeuiux/static/js/941.e240d892.chunk.js",
     "static/js/324.ecc78dbc.chunk.js": "/awesomeuiux/static/js/324.ecc78dbc.chunk.js",
     "static/media/NotoSansKR-Black.otf": "/awesomeuiux/static/media/NotoSansKR-Black.dba005b6b1bed712b472.otf",
     "static/media/NotoSansKR-Bold.otf": "/awesomeuiux/static/media/NotoSansKR-Bold.c252383c4f70753be0e7.otf",
@@ -26,7 +26,7 @@
     "static/media/logo-awesome.svg": "/awesomeuiux/static/media/logo-awesome.5984a23ceb2572873e5ae80482aaad83.svg",
     "index.html": "/awesomeuiux/index.html",
     "main.35f617e2.css.map": "/awesomeuiux/static/css/main.35f617e2.css.map",
-    "main.890b54ad.js.map": "/awesomeuiux/static/js/main.890b54ad.js.map",
+    "main.063def1a.js.map": "/awesomeuiux/static/js/main.063def1a.js.map",
     "897.4776dabb.chunk.js.map": "/awesomeuiux/static/js/897.4776dabb.chunk.js.map",
     "394.1bdc7b5e.chunk.js.map": "/awesomeuiux/static/js/394.1bdc7b5e.chunk.js.map",
     "231.3ae1785a.chunk.js.map": "/awesomeuiux/static/js/231.3ae1785a.chunk.js.map",
@@ -38,13 +38,13 @@
     "163.0a962dcb.chunk.js.map": "/awesomeuiux/static/js/163.0a962dcb.chunk.js.map",
     "216.e8499622.chunk.js.map": "/awesomeuiux/static/js/216.e8499622.chunk.js.map",
     "131.fd245859.chunk.js.map": "/awesomeuiux/static/js/131.fd245859.chunk.js.map",
-    "862.85e2429f.chunk.js.map": "/awesomeuiux/static/js/862.85e2429f.chunk.js.map",
+    "862.5c5c6a06.chunk.js.map": "/awesomeuiux/static/js/862.5c5c6a06.chunk.js.map",
     "568.5bed09d0.chunk.js.map": "/awesomeuiux/static/js/568.5bed09d0.chunk.js.map",
-    "941.9f3c3feb.chunk.js.map": "/awesomeuiux/static/js/941.9f3c3feb.chunk.js.map",
+    "941.e240d892.chunk.js.map": "/awesomeuiux/static/js/941.e240d892.chunk.js.map",
     "324.ecc78dbc.chunk.js.map": "/awesomeuiux/static/js/324.ecc78dbc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.35f617e2.css",
-    "static/js/main.890b54ad.js"
+    "static/js/main.063def1a.js"
   ]
 }
