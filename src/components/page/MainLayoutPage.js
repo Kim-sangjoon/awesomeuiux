@@ -183,10 +183,10 @@ const MainLayoutPage = (props) => {
     const pageData = {
         "pageTitle":"레이아웃",
         "pageItems":[
-            {"index":1,"tabLabels":"분할 샘플","itemTitle":"분할 샘플(반응형)","itemContText":"레이아웃 컴포넌트","codeName":code01,"liveCode":true},
-            {"index":2,"tabLabels":"2분할","itemTitle":"2분할","itemContText":"2분할 레이아웃","codeName":code02,"liveCode":true},
-            {"index":3,"tabLabels":"3분할","itemTitle":"3분할","itemContText":"3분할 레이아웃","codeName":code03,"liveCode":true},
-            {"index":4,"tabLabels":"4분할","itemTitle":"4분할","itemContText":"4분할 레이아웃","codeName":code04,"liveCode":true}
+            {"index":1,"tabLabels":"분할 샘플","itemTitle":"분할 샘플(반응형)","itemContText":"레이아웃 컴포넌트","codeName":code01,"liveCode":true,"componentName":null},
+            {"index":2,"tabLabels":"2분할","itemTitle":"2분할","itemContText":"2분할 레이아웃","codeName":code02,"liveCode":true,"componentName":null},
+            {"index":3,"tabLabels":"3분할","itemTitle":"3분할","itemContText":"3분할 레이아웃","codeName":code03,"liveCode":true,"componentName":null},
+            {"index":4,"tabLabels":"4분할","itemTitle":"4분할","itemContText":"4분할 레이아웃","codeName":code04,"liveCode":true,"componentName":null}
         ]
     }
     return (
@@ -215,8 +215,9 @@ const MainLayoutPage = (props) => {
                                     <LiveProvider code={items.codeName} scope={scope}>
                                         <Grid item xs={12} md={6}>
                                             <Item sx={leftComponentBox}>
-                                                <LivePreview />
-                                                <LiveError />
+                                                {items.liveCode ? <LivePreview /> : ""}
+                                                {items.liveCode ? <LiveError /> : ""}
+                                                {items.liveCode ? "" : items.componentName}
                                             </Item>
                                         </Grid>
                                         <Grid item xs={12} md={6} sx={{position: 'relative'}}>
