@@ -133,31 +133,31 @@ const leftComponentBox = {border: '1px solid #ddd', boxShadow: 'none', height: '
 const rightCodeBox = {border: '1px solid #ddd', boxShadow: 'none', height: '400px', backgroundColor: 'rgb(29, 31, 33)', overflowY: 'auto', textAlign: 'left'}
 const code01=` <Box sx={{ '& button': { m: 1 } }}>
 <div>
-<Button size="small">Small</Button>
-<Button size="medium">Medium</Button>
-<Button size="large">Large</Button>
+    <Button size="small">Small</Button>
+    <Button size="medium">Medium</Button>
+    <Button size="large">Large</Button>
 </div>
 <div>
-<Button variant="outlined" size="small">
-    Small
-</Button>
-<Button variant="outlined" size="medium">
-    Medium
-</Button>
-<Button variant="outlined" size="large">
-    Large
-</Button>
-</div>
-<div>
-<Button variant="contained" size="small">
-    Small
-</Button>
-<Button variant="contained" size="medium">
-    Medium
-</Button>
-<Button variant="contained" size="large">
-    Large
-</Button>
+    <Button variant="outlined" size="small">
+        Small
+    </Button>
+    <Button variant="outlined" size="medium">
+        Medium
+    </Button>
+    <Button variant="outlined" size="large">
+        Large
+    </Button>
+    </div>
+    <div>
+    <Button variant="contained" size="small">
+        Small
+    </Button>
+    <Button variant="contained" size="medium">
+        Medium
+    </Button>
+    <Button variant="contained" size="large">
+        Large
+    </Button>
 </div>
 </Box>
 `;
@@ -166,22 +166,22 @@ sx={{
 display: 'flex', 
 justifyContent: 'center'}}
 >
-<FormGroup>
-<FormControlLabel 
-control={<Checkbox defaultChecked />} 
-label="Label" 
-/>
-<FormControlLabel 
-required 
-control={<Checkbox />} 
-label="Required" 
-/>
-<FormControlLabel 
-disabled 
-control={<Checkbox />} 
-label="Disabled" 
-/>
-</FormGroup>
+    <FormGroup>
+        <FormControlLabel 
+        control={<Checkbox defaultChecked />} 
+        label="Label" 
+        />
+        <FormControlLabel 
+        required 
+        control={<Checkbox />} 
+        label="Required" 
+        />
+        <FormControlLabel 
+        disabled 
+        control={<Checkbox />} 
+        label="Disabled" 
+        />
+    </FormGroup>
 </Box>
 `;
 const code03=`<FormControl>
@@ -190,28 +190,28 @@ id="demo-radio-buttons-group-label"
 >
 Gender
 </FormLabel>
-<RadioGroup
-aria-labelledby=
-"demo-radio-buttons-group-label"
-defaultValue="female"
-name="radio-buttons-group"
->
-<FormControlLabel 
-value="female" 
-control={<Radio />} 
-label="Female" 
-/>
-<FormControlLabel 
-value="male" 
-control={<Radio />} 
-label="Male" 
-/>
-<FormControlLabel 
-value="other" 
-control={<Radio />} 
-label="Other" 
-/>
-</RadioGroup>
+    <RadioGroup
+    aria-labelledby=
+    "demo-radio-buttons-group-label"
+    defaultValue="female"
+    name="radio-buttons-group"
+    >
+        <FormControlLabel 
+        value="female" 
+        control={<Radio />} 
+        label="Female" 
+        />
+        <FormControlLabel 
+        value="male" 
+        control={<Radio />} 
+        label="Male" 
+        />
+        <FormControlLabel 
+        value="other" 
+        control={<Radio />} 
+        label="Other" 
+        />
+    </RadioGroup>
 </FormControl>
 `;
 const code04=`const Selectbox = () => {
@@ -241,12 +241,10 @@ value={age}
 label="Age"
 onChange={handleChange}
 >
-<MenuItem value="">
-<em>None</em>
-</MenuItem>
-<MenuItem value={10}>Ten</MenuItem>
-<MenuItem value={20}>Twenty</MenuItem>
-<MenuItem value={30}>Thirty</MenuItem>
+    <MenuItem value=""><em>None</em></MenuItem>
+    <MenuItem value={10}>Ten</MenuItem>
+    <MenuItem value={20}>Twenty</MenuItem>
+    <MenuItem value={30}>Thirty</MenuItem>
 </Select>
 <FormHelperText>
 Disabled
@@ -267,38 +265,31 @@ label="Age"
 onChange={handleChange}
 renderValue={value}
 >
-<MenuItem value="">
-<em>None</em>
-</MenuItem>
-<MenuItem value={10}>Ten</MenuItem>
-<MenuItem value={20}>Twenty</MenuItem>
-<MenuItem value={30}>Thirty</MenuItem>
+    <MenuItem value=""><em>None</em></MenuItem>
+    <MenuItem value={10}>Ten</MenuItem>
+    <MenuItem value={20}>Twenty</MenuItem>
+    <MenuItem value={30}>Thirty</MenuItem>
 </Select>
 <FormHelperText>Error</FormHelperText>
 </FormControl>
 <FormControl sx={{ 
     m: 1, 
     minWidth: 120 }}>
-<InputLabel 
-id="demo-simple-select-readonly-label"
->
+<InputLabel id="demo-simple-select-readonly-label">
 Age
 </InputLabel>
 <Select
-labelId=
-"demo-simple-select-readonly-label"
-id="demo-simple-select-readonly"
-value={age}
-label="Age"
-onChange={handleChange}
-inputProps={{ readOnly: true }}
+    labelId="demo-simple-select-readonly-label"
+    id="demo-simple-select-readonly"
+    value={age}
+    label="Age"
+    onChange={handleChange}
+    inputProps={{ readOnly: true }}
 >
-<MenuItem value="">
-<em>None</em>
-</MenuItem>
-<MenuItem value={10}>Ten</MenuItem>
-<MenuItem value={20}>Twenty</MenuItem>
-<MenuItem value={30}>Thirty</MenuItem>
+    <MenuItem value=""><em>None</em></MenuItem>
+    <MenuItem value={10}>Ten</MenuItem>
+    <MenuItem value={20}>Twenty</MenuItem>
+    <MenuItem value={30}>Thirty</MenuItem>
 </Select>
 <FormHelperText>
 Read only
@@ -319,12 +310,10 @@ value={age}
 label="Age *"
 onChange={handleChange}
 >
-<MenuItem value="">
-<em>None</em>
-</MenuItem>
-<MenuItem value={10}>Ten</MenuItem>
-<MenuItem value={20}>Twenty</MenuItem>
-<MenuItem value={30}>Thirty</MenuItem>
+    <MenuItem value=""><em>None</em></MenuItem>
+    <MenuItem value={10}>Ten</MenuItem>
+    <MenuItem value={20}>Twenty</MenuItem>
+    <MenuItem value={30}>Thirty</MenuItem>
 </Select>
 <FormHelperText>
 Required
@@ -396,22 +385,22 @@ sx={{
 }}>
 <nav aria-label="main mailbox folders">
 <List>
-<ListItem disablePadding>
-<ListItemButton>
-<ListItemIcon>
-<InboxIcon />
-</ListItemIcon>
-<ListItemText primary="Inbox" />
-</ListItemButton>
-</ListItem>
-<ListItem disablePadding>
-<ListItemButton>
-<ListItemIcon>
-<DraftsIcon />
-</ListItemIcon>
-<ListItemText primary="Drafts" />
-</ListItemButton>
-</ListItem>
+    <ListItem disablePadding>
+        <ListItemButton>
+            <ListItemIcon>
+                <InboxIcon />
+            </ListItemIcon>
+            <ListItemText primary="Inbox" />
+        </ListItemButton>
+    </ListItem>
+    <ListItem disablePadding>
+        <ListItemButton>
+            <ListItemIcon>
+                <DraftsIcon />
+            </ListItemIcon>
+            <ListItemText primary="Drafts" />
+        </ListItemButton>
+    </ListItem>
 </List>
 </nav>
 <Divider />
@@ -419,19 +408,17 @@ sx={{
 aria-label="secondary 
 mailbox 
 folders">
-<List>
-<ListItem disablePadding>
-<ListItemButton>
-<ListItemText primary="Trash" />
-</ListItemButton>
-</ListItem>
-<ListItem disablePadding>
-<ListItemButton 
-component="a" 
-href="#simple-list">
-<ListItemText primary="Spam" />
-</ListItemButton>
-</ListItem>
+    <List>
+    <ListItem disablePadding>
+        <ListItemButton>
+            <ListItemText primary="Trash" />
+        </ListItemButton>
+    </ListItem>
+    <ListItem disablePadding>
+        <ListItemButton component="a" href="#simple-list">
+            <ListItemText primary="Spam" />
+        </ListItemButton>
+    </ListItem>
 </List>
 </nav>
 </Box>`;
@@ -442,92 +429,71 @@ sx={{ minWidth: 650 }}
 aria-label="simple table"
 >
 <TableHead>
-<TableRow>
-<TableCell>
-Dessert (100g serving)
-</TableCell>
-<TableCell 
-align="right"
->Calories
-</TableCell>
-<TableCell align="right">
-Fat&nbsp;(g)
-</TableCell>
-<TableCell align="right">
-Carbs&nbsp;(g)
-</TableCell>
-<TableCell align="right">
-Protein&nbsp;(g)
-</TableCell>
-</TableRow>
+    <TableRow>
+        <TableCell>Dessert (100g serving)</TableCell>
+        <TableCell align="right">Calories</TableCell>
+        <TableCell align="right">Fat&nbsp;(g)</TableCell>
+        <TableCell align="right">Carbs&nbsp;(g)</TableCell>
+        <TableCell align="right">Protein&nbsp;(g)</TableCell>
+    </TableRow>
 </TableHead>
 <TableBody>
-{rows.map((row) => (
-<TableRow
-key={row.name}
-sx={{ '&:last-child td, 
-&:last-child th': { border: 0 } 
-}}>
-<TableCell component="th" scope="row">
-{row.name}
-</TableCell>
-<TableCell align="right">
-{row.calories}
-</TableCell>
-<TableCell align="right">
-{row.fat}
-</TableCell>
-<TableCell align="right">
-{row.carbs}
-</TableCell>
-<TableCell align="right">
-{row.protein}
-</TableCell>
-</TableRow>
-))}
+    {rows.map((row) => (
+        <TableRow
+        key={row.name}
+        sx={{ '&:last-child td, 
+        &:last-child th': { border: 0 } 
+        }}>
+            <TableCell component="th" scope="row">{row.name}</TableCell>
+            <TableCell align="right">{row.calories}</TableCell>
+            <TableCell align="right">{row.fat}</TableCell>
+            <TableCell align="right">{row.carbs}</TableCell>
+            <TableCell align="right">{row.protein}</TableCell>
+        </TableRow>
+    ))}
 </TableBody>
 </Table>
 </TableContainer>`;
 const code08 = `<div>
 <Grid container justifyContent="center">
 <Grid item>
-<Tooltip disableFocusListener title="Add">
-<Button>Hover or touch</Button>
-</Tooltip>
+    <Tooltip disableFocusListener title="Add">
+        <Button>Hover or touch</Button>
+    </Tooltip>
 </Grid>
 <Grid item>
-<Tooltip disableHoverListener title="Add">
-<Button>Focus or touch</Button>
-</Tooltip>
+    <Tooltip disableHoverListener title="Add">
+        <Button>Focus or touch</Button>
+    </Tooltip>
 </Grid>
 <Grid item>
-<Tooltip 
-disableFocusListener 
-disableTouchListener title="Add">
-<Button>Hover</Button>
-</Tooltip>
+    <Tooltip 
+    disableFocusListener 
+    disableTouchListener title="Add">
+        <Button>Hover</Button>
+    </Tooltip>
 </Grid>
 <Grid item>
-<ClickAwayListener 
-onClickAway={handleTooltipClose}>
-<div>
-<Tooltip
-PopperProps={{
-disablePortal: true,
-}}
-onClose={handleTooltipClose}
-open={open}
-disableFocusListener
-disableHoverListener
-disableTouchListener
-title="Add"
->
-<Button 
-onClick={handleTooltipOpen}>
-Click</Button>
-</Tooltip>
-</div>
-</ClickAwayListener>
+    <ClickAwayListener 
+    onClickAway={handleTooltipClose}>
+        <div>
+            <Tooltip
+            PopperProps={{
+            disablePortal: true,
+            }}
+            onClose={handleTooltipClose}
+            open={open}
+            disableFocusListener
+            disableHoverListener
+            disableTouchListener
+            title="Add"
+            >
+                <Button 
+                onClick={handleTooltipOpen}>
+                Click</Button>
+            </Tooltip>
+        </div>
+    </ClickAwayListener>
 </Grid>
 </Grid>
 </div>
@@ -535,24 +501,16 @@ Click</Button>
 const code09 = `<Stack 
 sx={{ width: '100%' }} 
 spacing={2}>
-<Alert 
-severity="error"
->
+<Alert severity="error">
 This is an error alert — check it out!
 </Alert>
-<Alert 
-severity="warning"
->
+<Alert severity="warning">
 This is a warning alert — check it out!
 </Alert>
-<Alert 
-severity="info"
->
+<Alert severity="info">
 This is an info alert — check it out!
 </Alert>
-<Alert 
-severity="success"
->
+<Alert severity="success">
 This is a success alert — check it out!
 </Alert>
 </Stack>`;
@@ -564,37 +522,24 @@ onClick={handleClickOpen}>
 Open alert dialog
 </Button>
 <Dialog
-open={open}
-onClose={handleClose}
-aria-labelledby=
-"alert-dialog-title"
-aria-describedby=
-"alert-dialog-description"
+    open={open}
+    onClose={handleClose}
+    aria-labelledby="alert-dialog-title"
+    aria-describedby="alert-dialog-description"
 >
-<DialogTitle 
-id="alert-dialog-title"
->
-{"Use Google's location service?"}
+<DialogTitle id="alert-dialog-title">
+    {"Use Google's location service?"}
 </DialogTitle>
 <DialogContent>
-<DialogContentText 
-id="alert-dialog-description">
-Let Google 
-help apps determine location. 
-This means sending anonymous
-location data to Google, 
-even when no apps are running.
-</DialogContentText>
+    <DialogContentText id="alert-dialog-description">
+        Let Google help apps determine location. 
+        This means sending anonymous location data to Google, 
+        even when no apps are running.
+    </DialogContentText>
 </DialogContent>
 <DialogActions>
-<Button onClick={handleClose}>
-Disagree
-</Button>
-<Button 
-onClick={handleClose} 
-autoFocus>
-Agree
-</Button>
+    <Button onClick={handleClose}>Disagree</Button>
+    <Button onClick={handleClose} autoFocus>Agree</Button>
 </DialogActions>
 </Dialog>
 </div>
@@ -603,59 +548,55 @@ Agree
 const code11 = `<div style={{textAlign: 'left'}}>
 <Accordion>
 <AccordionSummary
-expandIcon={<ExpandMoreIcon />}
-aria-controls="panel1a-content"
-id="panel1a-header"
+    expandIcon={<ExpandMoreIcon />}
+    aria-controls="panel1a-content"
+    id="panel1a-header"
 >
-<Typography>Accordion 1</Typography>
+    <Typography>Accordion 1</Typography>
 </AccordionSummary>
 <AccordionDetails>
-<Typography>
-Lorem ipsum dolor sit amet, 
-consectetur adipiscing elit. 
-Suspendisse
-malesuada lacus ex, 
-sit amet blandit leo lobortis eget.
-</Typography>
+    <Typography>
+        Lorem ipsum dolor sit amet, 
+        consectetur adipiscing elit. 
+        Suspendissemalesuada lacus ex, sit amet blandit leo lobortis eget.
+    </Typography>
 </AccordionDetails>
 </Accordion>
 <Accordion>
 <AccordionSummary
-expandIcon={<ExpandMoreIcon />}
-aria-controls="panel2a-content"
-id="panel2a-header"
+    expandIcon={<ExpandMoreIcon />}
+    aria-controls="panel2a-content"
+    id="panel2a-header"
 >
 <Typography>Accordion 2</Typography>
 </AccordionSummary>
 <AccordionDetails>
 <Typography>
-Lorem ipsum dolor sit amet, 
-consectetur adipiscing elit. 
-Suspendisse
-malesuada lacus ex, 
-sit amet blandit leo lobortis eget.
+    Lorem ipsum dolor sit amet, 
+    consectetur adipiscing elit. 
+    Suspendissemalesuada lacus ex, sit amet blandit leo lobortis eget.
 </Typography>
 </AccordionDetails>
 </Accordion>
 <Accordion disabled>
 <AccordionSummary
-expandIcon={<ExpandMoreIcon />}
-aria-controls="panel3a-content"
-id="panel3a-header"
+    expandIcon={<ExpandMoreIcon />}
+    aria-controls="panel3a-content"
+    id="panel3a-header"
 >
-<Typography>
-Disabled Accordion
-</Typography>
+    <Typography>
+        Disabled Accordion
+    </Typography>
 </AccordionSummary>
 </Accordion>
 </div>`;
 const code12 = `<Stack 
 spacing={2} 
 sx={{alignItems: 'center'}}>
-<Pagination count={6} />
-<Pagination count={6} color="primary" />
-<Pagination count={6} color="secondary" />
-<Pagination count={6} disabled />
+    <Pagination count={6} />
+    <Pagination count={6} color="primary" />
+    <Pagination count={6} color="secondary" />
+    <Pagination count={6} disabled />
 </Stack>`;
 const code13 = `<Box 
 sx={{ 
@@ -663,49 +604,43 @@ sx={{
     typography: 'body1' 
 }}>
 <TabContext value={value}>
-<Box sx={{ 
-    borderBottom: 1, 
-    borderColor: 'divider' 
-}}>
-<TabList 
-onChange={handleChange} 
-aria-label="lab API tabs example">
-    <Tab label="Item One" value="1" />
-    <Tab label="Item Two" value="2" />
-    <Tab label="Item Three" value="3" />
-</TabList>
-</Box>
-<TabPanel value="1">Item One</TabPanel>
-<TabPanel value="2">Item Two</TabPanel>
-<TabPanel value="3">Item Three</TabPanel>
+    <Box sx={{ 
+        borderBottom: 1, 
+        borderColor: 'divider' 
+    }}>
+        <TabList 
+        onChange={handleChange} 
+        aria-label="lab API tabs example">
+            <Tab label="Item One" value="1" />
+            <Tab label="Item Two" value="2" />
+            <Tab label="Item Three" value="3" />
+        </TabList>
+    </Box>
+        <TabPanel value="1">Item One</TabPanel>
+        <TabPanel value="2">Item Two</TabPanel>
+        <TabPanel value="3">Item Three</TabPanel>
 </TabContext>
 </Box>`;
 const code14 = `<Button 
-onClick={handleOpen}>
-Open modal
-</Button>
+onClick={handleOpen}>Open modal</Button>
 <Modal
-open={open}
-onClose={handleClose}
-aria-labelledby=
-"modal-modal-title"
-aria-describedby=
-"modal-modal-description"
+    open={open}
+    onClose={handleClose}
+    aria-labelledby=
+    "modal-modal-title"
+    aria-describedby=
+    "modal-modal-description"
 >
 <Box sx={style}>
-<Typography 
-id="modal-modal-title" 
-variant="h6" 
-component="h2">
-    Text in a modal
-</Typography>
-<Typography 
-id="modal-modal-description" 
-sx={{ mt: 2 }}>
-    Duis mollis, 
-    est non commodo luctus, 
-    nisi erat porttitor ligula.
-</Typography>
+    <Typography id="modal-modal-title" variant="h6" component="h2">
+        Text in a modal
+    </Typography>
+    <Typography id="modal-modal-description" 
+        sx={{ mt: 2 }}>
+            Duis mollis, 
+            est non commodo luctus, 
+            nisi erat porttitor ligula.
+    </Typography>
 </Box>
 </Modal>`;
 const code15 = `<LocalizationProvider 
@@ -1180,19 +1115,33 @@ const MainComponentPage = (props) => {
             behavior: "smooth"
         })
     }
-
-    const tabLabels = [
-        "Button", "Checkbox", "Radio Group", "Select", "Text Field",
-        "List", "Table", "Tooltip", "Alert", "Dialog",
-        "Accordion", "Pagination", "Tabs", "Modal", "Date Pickers"
-      ];
+    const pageData = {
+        "pageTitle":"컴포넌트",
+        "pageItems":[
+            {"index":1,"tabLabels":"Button","itemTitle":"버튼","itemContText":"버튼 컴포넌트","codeName":code01,"liveCode":true, "componentName":null},
+            {"index":2,"tabLabels":"Checkbox","itemTitle":"체크박스","itemContText":"체크박스 컴포넌트","codeName":code02,"liveCode":true, "componentName":null},
+            {"index":3,"tabLabels":"Radio Group","itemTitle":"라디오","itemContText":"라디오 컴포넌트","codeName":code03,"liveCode":true, "componentName":null},
+            {"index":4,"tabLabels":"Select","itemTitle":"셀렉트","itemContText":"셀렉트 컴포넌트","codeName":code04,"liveCode":false, "componentName":<Selectbox />},
+            {"index":5,"tabLabels":"Text Field","itemTitle":"TextField","itemContText":"TextField 컴포넌트","codeName":code05,"liveCode":true, "componentName":null},
+            {"index":6,"tabLabels":"List","itemTitle":"LIST","itemContText":"LIST 컴포넌트","codeName":code06,"liveCode":true, "componentName":null},
+            {"index":7,"tabLabels":"Table","itemTitle":"TABLE","itemContText":"TABLE 컴포넌트","codeName":code07,"liveCode":false, "componentName":<BasicTable />},
+            {"index":8,"tabLabels":"Tooltip","itemTitle":"ToolTip","itemContText":"ToolTip 컴포넌트","codeName":code08,"liveCode":false, "componentName":<TriggersTooltips />},
+            {"index":9,"tabLabels":"Alert","itemTitle":"Alert","itemContText":"Alert 컴포넌트","codeName":code09,"liveCode":true, "componentName":null},
+            {"index":10,"tabLabels":"Dialog","itemTitle":"Dialog","itemContText":"Dialog 컴포넌트","codeName":code10,"liveCode":false, "componentName":<AlertDialog />},
+            {"index":11,"tabLabels":"Accordion","itemTitle":"Accordion","itemContText":"Accordion 컴포넌트","codeName":code11,"liveCode":true, "componentName":null},
+            {"index":12,"tabLabels":"Pagination","itemTitle":"Pagination","itemContText":"Pagination 컴포넌트","codeName":code12,"liveCode":true, "componentName":null},
+            {"index":13,"tabLabels":"Tabs","itemTitle":"Tabs","itemContText":"Tabs 컴포넌트","codeName":code13,"liveCode":false, "componentName":<LabTabs />},
+            {"index":14,"tabLabels":"Modal","itemTitle":"Modal","itemContText":"Modal 컴포넌트","codeName":code14,"liveCode":false, "componentName":<BasicModal />},
+            {"index":15,"tabLabels":"Date Pickers","itemTitle":"Date Pickers","itemContText":"Date Pickers 컴포넌트","codeName":code15,"liveCode":true, "componentName":null}
+        ]
+    }
 
     return (
         <>
             <Box className='contentboxwrap'>
                 <Toolbar />
                 <Box>
-                    <h1>컴포넌트</h1>
+                    <h1>{pageData.pageTitle}</h1>
                     <Tabs
                         className='contentTab'
                         ref={tabRef}
@@ -1202,344 +1151,33 @@ const MainComponentPage = (props) => {
                         onChange={handleTabChange}
                         sx={{backgroundColor: 'rgb(255 255 255 / 60%)'}}
                     >
-                        {tabLabels.map(label => <Tab key={label} label={label} />)}
+                        {pageData.pageItems.map(items => <Tab key={items.index} label={items.tabLabels} />)}
                     </Tabs>
-                    <Box className='tab-item'>
-                        <h2>버튼</h2>
-                        <p className='contText'>버튼 컴포넌트</p>
-                        <Box sx={{ flexGrow: 1 }}>
-                            <Grid container spacing={2}>
-                                <LiveProvider code={code01} scope={scope}>
-                                    <Grid item xs={12} md={6}>
-                                        <Item sx={leftComponentBox}>
-                                            <LivePreview />
-                                            <LiveError />
-                                        </Item>
-                                    </Grid>
-                                    <Grid item xs={12} md={6} sx={{position: 'relative'}}>
-                                        <Item sx={rightCodeBox}>
-                                            <LiveEditor />
-                                        </Item>
-                                        <CopyButton onClick={handleToast} code={code01} />
-                                    </Grid>
-                                </LiveProvider>
-                            </Grid>
+                    {pageData.pageItems.map(items => 
+                        <Box className='tab-item' key={items.index}>
+                            <h2>{items.itemTitle}</h2>
+                            <p className='contText'>{items.itemContText}</p>
+                            <Box sx={{ flexGrow: 1 }}>
+                                <Grid container spacing={2}>
+                                    <LiveProvider code={items.codeName} scope={scope}>
+                                        <Grid item xs={12} md={6}>
+                                            <Item sx={leftComponentBox}>
+                                                {items.liveCode ? <LivePreview /> : ""}
+                                                {items.liveCode ? <LiveError /> : ""}
+                                                {items.liveCode ? "" : items.componentName}
+                                            </Item>
+                                        </Grid>
+                                        <Grid item xs={12} md={6} sx={{position: 'relative'}}>
+                                            <Item sx={rightCodeBox}>
+                                                {items.liveCode ? <LiveEditor /> : <LiveEditor disabled/>}
+                                            </Item>
+                                            <CopyButton onClick={handleToast} code={items.codeName} />
+                                        </Grid>
+                                    </LiveProvider>
+                                </Grid>
+                            </Box>
                         </Box>
-                    </Box>
-                    <Box className='tab-item'>
-                        <h2>체크박스</h2>
-                        <p className='contText'>체크박스 컴포넌트</p>
-                        <Box sx={{ flexGrow: 1 }}>
-                            <Grid container spacing={2}>
-                                <LiveProvider code={code02} scope={scope}>
-                                    <Grid item xs={12} md={6}>
-                                        <Item sx={leftComponentBox}>
-                                            <LivePreview />
-                                            <LiveError />
-                                        </Item>
-                                    </Grid>
-                                    <Grid item xs={12} md={6} sx={{position: 'relative'}}>
-                                        <Item sx={rightCodeBox}>
-                                            <LiveEditor />
-                                        </Item>
-                                        <CopyButton onClick={handleToast} code={code02} />
-                                    </Grid>
-                                </LiveProvider>
-                            </Grid>
-                        </Box>
-                    </Box>
-                    <Box className='tab-item'>
-                        <h2>라디오</h2>
-                        <p className='contText'>라디오 컴포넌트</p>
-                        <Box sx={{ flexGrow: 1 }}>
-                            <Grid container spacing={2}>
-                                <LiveProvider code={code03} scope={scope}>
-                                    <Grid item xs={12} md={6}>
-                                        <Item sx={leftComponentBox}>
-                                            <LivePreview />
-                                            <LiveError />
-                                        </Item>
-                                    </Grid>
-                                    <Grid item xs={12} md={6} sx={{position: 'relative'}}>
-                                        <Item sx={rightCodeBox}>
-                                            <LiveEditor />
-                                        </Item>
-                                        <CopyButton onClick={handleToast} code={code03} />
-                                    </Grid>
-                                </LiveProvider>
-                            </Grid>
-                        </Box>
-                    </Box>
-                    <Box className='tab-item'>
-                        <h2>셀렉트</h2>
-                        <p className='contText'>셀렉트 컴포넌트</p>
-                        <Box sx={{ flexGrow: 1 }}>
-                            <Grid container spacing={2}>
-                                <LiveProvider code={code04} scope={scope}>
-                                    <Grid item xs={12} md={6}>
-                                        <Item sx={leftComponentBox}>
-                                            {/* <LivePreview />
-                                            <LiveError /> */}
-                                            <Selectbox />
-                                        </Item>
-                                    </Grid>
-                                    <Grid item xs={12} md={6} sx={{position: 'relative'}}>
-                                        <Item sx={rightCodeBox}>
-                                            <LiveEditor disabled/>
-                                        </Item>
-                                        <CopyButton onClick={handleToast} code={code04} />
-                                    </Grid>
-                                </LiveProvider>
-                            </Grid>
-                        </Box>
-                    </Box>
-                    <Box className='tab-item'>
-                        <h2>TextField</h2>
-                        <p className='contText'>TextField 컴포넌트</p>
-                        <Box sx={{ flexGrow: 1 }}>
-                            <Grid container spacing={2}>
-                                <LiveProvider code={code05} scope={scope}>
-                                    <Grid item xs={12} md={6}>
-                                        <Item sx={leftComponentBox}>
-                                            <LivePreview />
-                                            <LiveError />
-                                        </Item>
-                                    </Grid>
-                                    <Grid item xs={12} md={6} sx={{position: 'relative'}}>
-                                        <Item sx={rightCodeBox}>
-                                            <LiveEditor />
-                                        </Item>
-                                        <CopyButton onClick={handleToast} code={code05} />
-                                    </Grid>
-                                </LiveProvider>
-                            </Grid>
-                        </Box>
-                    </Box>
-                    <Box className='tab-item'>
-                        <h2>LIST</h2>
-                        <p className='contText'>LIST 컴포넌트</p>
-                        <Box sx={{ flexGrow: 1 }}>
-                            <Grid container spacing={2}>
-                                <LiveProvider code={code06} scope={scope}>
-                                    <Grid item xs={12} md={6}>
-                                        <Item sx={leftComponentBox}>
-                                            <LivePreview />
-                                            <LiveError />
-                                        </Item>
-                                    </Grid>
-                                    <Grid item xs={12} md={6} sx={{position: 'relative'}}>
-                                        <Item sx={rightCodeBox}>
-                                            <LiveEditor />
-                                        </Item>
-                                        <CopyButton onClick={handleToast} code={code06} />
-                                    </Grid>
-                                </LiveProvider>
-                            </Grid>
-                        </Box>
-                    </Box>
-                    <Box className='tab-item'>
-                        <h2>TABLE</h2>
-                        <p className='contText'>TABLE 컴포넌트</p>
-                        <Box sx={{ flexGrow: 1 }}>
-                            <Grid container spacing={2}>
-                                <LiveProvider code={code07} scope={scope}>
-                                    <Grid item xs={12} md={6}>
-                                        <Item sx={leftComponentBox}>
-                                            {/* <LivePreview />
-                                            <LiveError /> */}
-                                            <BasicTable />
-                                        </Item>
-                                    </Grid>
-                                    <Grid item xs={12} md={6} sx={{position: 'relative'}}>
-                                        <Item sx={rightCodeBox}>
-                                            <LiveEditor disabled />
-                                        </Item>
-                                        <CopyButton onClick={handleToast} code={code07} />
-                                    </Grid>
-                                </LiveProvider>
-                            </Grid>
-                        </Box>
-                    </Box>
-                    <Box className='tab-item'>
-                        <h2>ToolTip</h2>
-                        <p className='contText'>ToolTip 컴포넌트</p>
-                        <Box sx={{ flexGrow: 1 }}>
-                            <Grid container spacing={2}>
-                                <LiveProvider code={code08} scope={scope}>
-                                    <Grid item xs={12} md={6}>
-                                        <Item sx={leftComponentBox}>
-                                            {/* <LivePreview />
-                                            <LiveError /> */}
-                                            <TriggersTooltips />
-                                        </Item>
-                                    </Grid>
-                                    <Grid item xs={12} md={6} sx={{position: 'relative'}}>
-                                        <Item sx={rightCodeBox}>
-                                            <LiveEditor disabled/>
-                                        </Item>
-                                        <CopyButton onClick={handleToast} code={code08} />
-                                    </Grid>
-                                </LiveProvider>
-                            </Grid>
-                        </Box>
-                    </Box>
-                    <Box className='tab-item'>
-                        <h2>Alert</h2>
-                        <p className='contText'>Alert 컴포넌트</p>
-                        <Box sx={{ flexGrow: 1 }}>
-                            <Grid container spacing={2}>
-                                <LiveProvider code={code09} scope={scope}>
-                                    <Grid item xs={12} md={6}>
-                                        <Item sx={leftComponentBox}>
-                                            <LivePreview />
-                                            <LiveError />
-                                        </Item>
-                                    </Grid>
-                                    <Grid item xs={12} md={6} sx={{position: 'relative'}}>
-                                        <Item sx={rightCodeBox}>
-                                            <LiveEditor />
-                                        </Item>
-                                        <CopyButton onClick={handleToast} code={code09} />
-                                    </Grid>
-                                </LiveProvider>
-                            </Grid>
-                        </Box>
-                    </Box>
-                    <Box className='tab-item'>
-                        <h2>Dialog</h2>
-                        <p className='contText'>Dialog 컴포넌트</p>
-                        <Box sx={{ flexGrow: 1 }}>
-                            <Grid container spacing={2}>
-                                <LiveProvider code={code10} scope={scope}>
-                                    <Grid item xs={12} md={6}>
-                                        <Item sx={leftComponentBox}>
-                                            {/* <LivePreview />
-                                            <LiveError /> */}
-                                            <AlertDialog />
-                                        </Item>
-                                    </Grid>
-                                    <Grid item xs={12} md={6} sx={{position: 'relative'}}>
-                                        <Item sx={rightCodeBox}>
-                                            <LiveEditor disabled />
-                                        </Item>
-                                        <CopyButton onClick={handleToast} code={code10} />
-                                    </Grid>
-                                </LiveProvider>
-                            </Grid>
-                        </Box>
-                    </Box>
-                    <Box className='tab-item'>
-                        <h2>Accordion</h2>
-                        <p className='contText'>Accordion 컴포넌트</p>
-                        <Box sx={{ flexGrow: 1 }}>
-                            <Grid container spacing={2}>
-                                <LiveProvider code={code11} scope={scope}>
-                                    <Grid item xs={12} md={6}>
-                                        <Item sx={leftComponentBox}>
-                                            <LivePreview />
-                                            <LiveError />
-                                        </Item>
-                                    </Grid>
-                                    <Grid item xs={12} md={6} sx={{position: 'relative'}}>
-                                        <Item sx={rightCodeBox}>
-                                            <LiveEditor />
-                                        </Item>
-                                        <CopyButton onClick={handleToast} code={code11} />
-                                    </Grid>
-                                </LiveProvider>
-                            </Grid>
-                        </Box>
-                    </Box>
-                    <Box className='tab-item'>
-                        <h2>Pagination</h2>
-                        <p className='contText'>Pagination 컴포넌트</p>
-                        <Box sx={{ flexGrow: 1 }}>
-                            <Grid container spacing={2}>
-                                <LiveProvider code={code12} scope={scope}>
-                                    <Grid item xs={12} md={6}>
-                                        <Item sx={leftComponentBox}>
-                                            <LivePreview />
-                                            <LiveError />
-                                        </Item>
-                                    </Grid>
-                                    <Grid item xs={12} md={6} sx={{position: 'relative'}}>
-                                        <Item sx={rightCodeBox}>
-                                            <LiveEditor />
-                                        </Item>
-                                        <CopyButton onClick={handleToast} code={code12} />
-                                    </Grid>
-                                </LiveProvider>
-                            </Grid>
-                        </Box>
-                    </Box>
-                    <Box className='tab-item'>
-                        <h2>Tabs</h2>
-                        <p className='contText'>Tabs 컴포넌트</p>
-                        <Box sx={{ flexGrow: 1 }}>
-                            <Grid container spacing={2}>
-                                <LiveProvider code={code13} scope={scope}>
-                                    <Grid item xs={12} md={6}>
-                                        <Item sx={leftComponentBox}>
-                                            {/* <LivePreview />
-                                            <LiveError /> */}
-                                            <LabTabs />
-                                        </Item>
-                                    </Grid>
-                                    <Grid item xs={12} md={6} sx={{position: 'relative'}}>
-                                        <Item sx={rightCodeBox}>
-                                            <LiveEditor disabled/>
-                                        </Item>
-                                        <CopyButton onClick={handleToast} code={code13} />
-                                    </Grid>
-                                </LiveProvider>
-                            </Grid>
-                        </Box>
-                    </Box>
-                    <Box className='tab-item'>
-                        <h2>Modal</h2>
-                        <p className='contText'>Modal 컴포넌트</p>
-                        <Box sx={{ flexGrow: 1 }}>
-                            <Grid container spacing={2}>
-                                <LiveProvider code={code14} scope={scope}>
-                                    <Grid item xs={12} md={6}>
-                                        <Item sx={leftComponentBox}>
-                                            {/* <LivePreview />
-                                            <LiveError /> */}
-                                            <BasicModal />
-                                        </Item>
-                                    </Grid>
-                                    <Grid item xs={12} md={6} sx={{position: 'relative'}}>
-                                        <Item sx={rightCodeBox}>
-                                            <LiveEditor disabled/>
-                                        </Item>
-                                        <CopyButton onClick={handleToast} code={code14} />
-                                    </Grid>
-                                </LiveProvider>
-                            </Grid>
-                        </Box>
-                    </Box>
-                    <Box className='tab-item'>
-                        <h2>Date Pickers</h2>
-                        <p className='contText'>Date Pickers 컴포넌트</p>
-                        <Box sx={{ flexGrow: 1 }}>
-                            <Grid container spacing={2}>
-                                <LiveProvider code={code15} scope={scope}>
-                                    <Grid item xs={12} md={6}>
-                                        <Item sx={leftComponentBox}>
-                                            <LivePreview />
-                                            <LiveError />
-                                        </Item>
-                                    </Grid>
-                                    <Grid item xs={12} md={6} sx={{position: 'relative'}}>
-                                        <Item sx={rightCodeBox}>
-                                            <LiveEditor />
-                                        </Item>
-                                        <CopyButton onClick={handleToast} code={code15} />
-                                    </Grid>
-                                </LiveProvider>
-                            </Grid>
-                        </Box>
-                    </Box>
+                    )}
                     <Box className='bottom-last'></Box>
                 </Box>
                 <Box className='top-button' onClick={handleScrollTop}>TOP</Box>
