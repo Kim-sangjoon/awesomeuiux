@@ -180,15 +180,21 @@ const MainLayoutPage = (props) => {
             behavior: "smooth"
         });
     }
-
-    const tabLabels = ["분할 샘플", "2분할", "3분할", "4분할"];
-
+    const pageData = {
+        "pageTitle":"레이아웃",
+        "pageItems":[
+            {"index":1,"tabLabels":"분할 샘플","itemTitle":"분할 샘플(반응형)","itemContText":"레이아웃 컴포넌트","codeName":code01,"liveCode":true},
+            {"index":2,"tabLabels":"2분할","itemTitle":"2분할","itemContText":"2분할 레이아웃","codeName":code02,"liveCode":true},
+            {"index":3,"tabLabels":"3분할","itemTitle":"3분할","itemContText":"3분할 레이아웃","codeName":code03,"liveCode":true},
+            {"index":4,"tabLabels":"4분할","itemTitle":"4분할","itemContText":"4분할 레이아웃","codeName":code04,"liveCode":true}
+        ]
+    }
     return (
         <>
             <Box className='contentboxwrap'>
                 <Toolbar />
                 <Box>
-                    <h1>레이아웃</h1>
+                    <h1>{pageData.pageTitle}</h1>
                     <Tabs 
                         className='contentTab' 
                         ref={tabRef} 
@@ -198,96 +204,32 @@ const MainLayoutPage = (props) => {
                         onChange={handleTabChange} 
                         sx={{backgroundColor: 'rgb(255 255 255 / 60%)'}}
                     >
-                        {tabLabels.map(label => <Tab key={label} label={label} />)}
+                        {pageData.pageItems.map(items => <Tab key={items.index} label={items.tabLabels} />)}
                     </Tabs>
-                    <Box className='tab-item'>
-                        <h2>분할 샘플(반응형)</h2>
-                        <p className='contText'>레아아웃 컴포넌트</p>
-                        <Box sx={{ flexGrow: 1 }}>
-                            <Grid container spacing={2}>
-                                <LiveProvider code={code01} scope={scope}>
-                                    <Grid item xs={12} md={6}>
-                                        <Item sx={leftComponentBox}>
-                                            <LivePreview />
-                                            <LiveError />
-                                        </Item>
-                                    </Grid>
-                                    <Grid item xs={12} md={6} sx={{position: 'relative'}}>
-                                        <Item sx={rightCodeBox}>
-                                            <LiveEditor />
-                                        </Item>
-                                        <CopyButton onClick={handleToast} code={code01} />
-                                    </Grid>
-                                </LiveProvider>
-                            </Grid>
+                    {pageData.pageItems.map(items => 
+                        <Box className='tab-item' key={items.index}>
+                            <h2>{items.itemTitle}</h2>
+                            <p className='contText'>{items.itemContText}</p>
+                            <Box sx={{ flexGrow: 1 }}>
+                                <Grid container spacing={2}>
+                                    <LiveProvider code={items.codeName} scope={scope}>
+                                        <Grid item xs={12} md={6}>
+                                            <Item sx={leftComponentBox}>
+                                                <LivePreview />
+                                                <LiveError />
+                                            </Item>
+                                        </Grid>
+                                        <Grid item xs={12} md={6} sx={{position: 'relative'}}>
+                                            <Item sx={rightCodeBox}>
+                                                <LiveEditor />
+                                            </Item>
+                                            <CopyButton onClick={handleToast} code={items.codeName} />
+                                        </Grid>
+                                    </LiveProvider>
+                                </Grid>
+                            </Box>
                         </Box>
-                    </Box>
-                    <Box className='tab-item'>
-                        <h2>2분할</h2>
-                        <p className='contText'>2분할 레이아웃</p>
-                        <Box sx={{ flexGrow: 1 }}>
-                            <Grid container spacing={2}>
-                                <LiveProvider code={code02} scope={scope}>
-                                    <Grid item xs={12} md={6}>
-                                        <Item sx={leftComponentBox}>
-                                            <LivePreview />
-                                            <LiveError />
-                                        </Item>
-                                    </Grid>
-                                    <Grid item xs={12} md={6} sx={{position: 'relative'}}>
-                                        <Item sx={rightCodeBox}>
-                                            <LiveEditor />
-                                        </Item>
-                                        <CopyButton onClick={handleToast} code={code02} />
-                                    </Grid>
-                                </LiveProvider>
-                            </Grid>
-                        </Box>
-                    </Box>
-                    <Box className='tab-item'>
-                        <h2>3분할</h2>
-                        <p className='contText'>3분할 레이아웃</p>
-                        <Box sx={{ flexGrow: 1 }}>
-                            <Grid container spacing={2}>
-                                <LiveProvider code={code03} scope={scope}>
-                                    <Grid item xs={12} md={6}>
-                                        <Item sx={leftComponentBox}>
-                                            <LivePreview />
-                                            <LiveError />
-                                        </Item>
-                                    </Grid>
-                                    <Grid item xs={12} md={6} sx={{position: 'relative'}}>
-                                        <Item sx={rightCodeBox}>
-                                            <LiveEditor />
-                                        </Item>
-                                        <CopyButton onClick={handleToast} code={code03} />
-                                    </Grid>
-                                </LiveProvider>
-                            </Grid>
-                        </Box>
-                    </Box>
-                    <Box className='tab-item'>
-                        <h2>4분할</h2>
-                        <p className='contText'>4분할 레이아웃</p>
-                        <Box sx={{ flexGrow: 1 }}>
-                            <Grid container spacing={2}>
-                                <LiveProvider code={code04} scope={scope}>
-                                    <Grid item xs={12} md={6}>
-                                        <Item sx={leftComponentBox}>
-                                            <LivePreview />
-                                            <LiveError />
-                                        </Item>
-                                    </Grid>
-                                    <Grid item xs={12} md={6} sx={{position: 'relative'}}>
-                                        <Item sx={rightCodeBox}>
-                                            <LiveEditor />
-                                        </Item>
-                                        <CopyButton onClick={handleToast} code={code04} />
-                                    </Grid>
-                                </LiveProvider>
-                            </Grid>
-                        </Box>
-                    </Box>
+                    )}
                     <Box className='bottom-last'></Box>
                 </Box>
                 <Box className='top-button' onClick={handleScrollTop}>TOP</Box>
