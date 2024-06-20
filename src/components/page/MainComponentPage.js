@@ -224,102 +224,82 @@ const handleChange = (event) => {
     setAge(event.target.value);
 };
 return (
-<div>
-<FormControl 
-sx={{ m: 1, minWidth: 120 }}
- disabled>
-<InputLabel 
-id="demo-simple-select-disabled-label"
->
-Age
-</InputLabel>
-<Select
-labelId=
-"demo-simple-select-disabled-label"
-id="demo-simple-select-disabled"
-value={age}
-label="Age"
-onChange={handleChange}
->
-    <MenuItem value=""><em>None</em></MenuItem>
-    <MenuItem value={10}>Ten</MenuItem>
-    <MenuItem value={20}>Twenty</MenuItem>
-    <MenuItem value={30}>Thirty</MenuItem>
-</Select>
-<FormHelperText>
-Disabled
-</FormHelperText>
-</FormControl>
-<FormControl 
-sx={{ m: 1, minWidth: 120 }} 
-error>
-<InputLabel 
-id="demo-simple-select-error-label">
-Age
-</InputLabel>
-<Select
-labelId="demo-simple-select-error-label"
-id="demo-simple-select-error"
-value={age}
-label="Age"
-onChange={handleChange}
-renderValue={value}
->
-    <MenuItem value=""><em>None</em></MenuItem>
-    <MenuItem value={10}>Ten</MenuItem>
-    <MenuItem value={20}>Twenty</MenuItem>
-    <MenuItem value={30}>Thirty</MenuItem>
-</Select>
-<FormHelperText>Error</FormHelperText>
-</FormControl>
-<FormControl sx={{ 
-    m: 1, 
-    minWidth: 120 }}>
-<InputLabel id="demo-simple-select-readonly-label">
-Age
-</InputLabel>
-<Select
-    labelId="demo-simple-select-readonly-label"
-    id="demo-simple-select-readonly"
-    value={age}
-    label="Age"
-    onChange={handleChange}
-    inputProps={{ readOnly: true }}
->
-    <MenuItem value=""><em>None</em></MenuItem>
-    <MenuItem value={10}>Ten</MenuItem>
-    <MenuItem value={20}>Twenty</MenuItem>
-    <MenuItem value={30}>Thirty</MenuItem>
-</Select>
-<FormHelperText>
-Read only
-</FormHelperText>
-</FormControl>
-<FormControl 
-required 
-sx={{ m: 1, minWidth: 120 }}>
-<InputLabel 
-id="demo-simple-select-required-label">
-Age
-</InputLabel>
-<Select
-labelId=
-"demo-simple-select-required-label"
-id="demo-simple-select-required"
-value={age}
-label="Age *"
-onChange={handleChange}
->
-    <MenuItem value=""><em>None</em></MenuItem>
-    <MenuItem value={10}>Ten</MenuItem>
-    <MenuItem value={20}>Twenty</MenuItem>
-    <MenuItem value={30}>Thirty</MenuItem>
-</Select>
-<FormHelperText>
-Required
-</FormHelperText>
-</FormControl>
-</div>
+    <div>
+    <FormControl sx={{ m: 1, minWidth: 120 }} disabled>
+    <InputLabel id="demo-simple-select-disabled-label">Age</InputLabel>
+    <Select
+        labelId="demo-simple-select-disabled-label"
+        id="demo-simple-select-disabled"
+        value={age}
+        label="Age"
+        onChange={handleChange}
+    >
+        <MenuItem value="">
+        <em>None</em>
+        </MenuItem>
+        <MenuItem value={10}>Ten</MenuItem>
+        <MenuItem value={20}>Twenty</MenuItem>
+        <MenuItem value={30}>Thirty</MenuItem>
+    </Select>
+    <FormHelperText>Disabled</FormHelperText>
+    </FormControl>
+    <FormControl sx={{ m: 1, minWidth: 120 }} error>
+    <InputLabel id="demo-simple-select-error-label">Age</InputLabel>
+    <Select
+        labelId="demo-simple-select-error-label"
+        id="demo-simple-select-error"
+        value={age}
+        label="Age"
+        onChange={handleChange}
+        renderValue={value}
+    >
+        <MenuItem value="">
+        <em>None</em>
+        </MenuItem>
+        <MenuItem value={10}>Ten</MenuItem>
+        <MenuItem value={20}>Twenty</MenuItem>
+        <MenuItem value={30}>Thirty</MenuItem>
+    </Select>
+    <FormHelperText>Error</FormHelperText>
+    </FormControl>
+    <FormControl sx={{ m: 1, minWidth: 120 }}>
+    <InputLabel id="demo-simple-select-readonly-label">Age</InputLabel>
+    <Select
+        labelId="demo-simple-select-readonly-label"
+        id="demo-simple-select-readonly"
+        value={age}
+        label="Age"
+        onChange={handleChange}
+        inputProps={{ readOnly: true }}
+    >
+        <MenuItem value="">
+        <em>None</em>
+        </MenuItem>
+        <MenuItem value={10}>Ten</MenuItem>
+        <MenuItem value={20}>Twenty</MenuItem>
+        <MenuItem value={30}>Thirty</MenuItem>
+    </Select>
+    <FormHelperText>Read only</FormHelperText>
+    </FormControl>
+    <FormControl required sx={{ m: 1, minWidth: 120 }}>
+    <InputLabel id="demo-simple-select-required-label">Age</InputLabel>
+    <Select
+        labelId="demo-simple-select-required-label"
+        id="demo-simple-select-required"
+        value={age}
+        label="Age *"
+        onChange={handleChange}
+    >
+        <MenuItem value="">
+        <em>None</em>
+        </MenuItem>
+        <MenuItem value={10}>Ten</MenuItem>
+        <MenuItem value={20}>Twenty</MenuItem>
+        <MenuItem value={30}>Thirty</MenuItem>
+    </Select>
+    <FormHelperText>Required</FormHelperText>
+    </FormControl>
+    </div>
 )
 }
 `;
@@ -1118,21 +1098,21 @@ const MainComponentPage = (props) => {
     const pageData = {
         "pageTitle":"컴포넌트",
         "pageItems":[
-            {"index":1,"tabLabels":"Button","itemTitle":"버튼","itemContText":"버튼 컴포넌트","codeName":code01,"liveCode":true, "componentName":null},
-            {"index":2,"tabLabels":"Checkbox","itemTitle":"체크박스","itemContText":"체크박스 컴포넌트","codeName":code02,"liveCode":true, "componentName":null},
-            {"index":3,"tabLabels":"Radio Group","itemTitle":"라디오","itemContText":"라디오 컴포넌트","codeName":code03,"liveCode":true, "componentName":null},
-            {"index":4,"tabLabels":"Select","itemTitle":"셀렉트","itemContText":"셀렉트 컴포넌트","codeName":code04,"liveCode":false, "componentName":<Selectbox />},
-            {"index":5,"tabLabels":"Text Field","itemTitle":"TextField","itemContText":"TextField 컴포넌트","codeName":code05,"liveCode":true, "componentName":null},
-            {"index":6,"tabLabels":"List","itemTitle":"LIST","itemContText":"LIST 컴포넌트","codeName":code06,"liveCode":true, "componentName":null},
-            {"index":7,"tabLabels":"Table","itemTitle":"TABLE","itemContText":"TABLE 컴포넌트","codeName":code07,"liveCode":false, "componentName":<BasicTable />},
-            {"index":8,"tabLabels":"Tooltip","itemTitle":"ToolTip","itemContText":"ToolTip 컴포넌트","codeName":code08,"liveCode":false, "componentName":<TriggersTooltips />},
-            {"index":9,"tabLabels":"Alert","itemTitle":"Alert","itemContText":"Alert 컴포넌트","codeName":code09,"liveCode":true, "componentName":null},
-            {"index":10,"tabLabels":"Dialog","itemTitle":"Dialog","itemContText":"Dialog 컴포넌트","codeName":code10,"liveCode":false, "componentName":<AlertDialog />},
-            {"index":11,"tabLabels":"Accordion","itemTitle":"Accordion","itemContText":"Accordion 컴포넌트","codeName":code11,"liveCode":true, "componentName":null},
-            {"index":12,"tabLabels":"Pagination","itemTitle":"Pagination","itemContText":"Pagination 컴포넌트","codeName":code12,"liveCode":true, "componentName":null},
-            {"index":13,"tabLabels":"Tabs","itemTitle":"Tabs","itemContText":"Tabs 컴포넌트","codeName":code13,"liveCode":false, "componentName":<LabTabs />},
-            {"index":14,"tabLabels":"Modal","itemTitle":"Modal","itemContText":"Modal 컴포넌트","codeName":code14,"liveCode":false, "componentName":<BasicModal />},
-            {"index":15,"tabLabels":"Date Pickers","itemTitle":"Date Pickers","itemContText":"Date Pickers 컴포넌트","codeName":code15,"liveCode":true, "componentName":null}
+            {"index":1,"tabLabels":"Button","itemTitle":"버튼","itemContText":"버튼 컴포넌트","codeName":code01,"liveCode":true, "useComponent":null},
+            {"index":2,"tabLabels":"Checkbox","itemTitle":"체크박스","itemContText":"체크박스 컴포넌트","codeName":code02,"liveCode":true, "useComponent":null},
+            {"index":3,"tabLabels":"Radio Group","itemTitle":"라디오","itemContText":"라디오 컴포넌트","codeName":code03,"liveCode":true, "useComponent":null},
+            {"index":4,"tabLabels":"Select","itemTitle":"셀렉트","itemContText":"셀렉트 컴포넌트","codeName":code04,"liveCode":false, "useComponent":<Selectbox />},
+            {"index":5,"tabLabels":"Text Field","itemTitle":"TextField","itemContText":"TextField 컴포넌트","codeName":code05,"liveCode":true, "useComponent":null},
+            {"index":6,"tabLabels":"List","itemTitle":"LIST","itemContText":"LIST 컴포넌트","codeName":code06,"liveCode":true, "useComponent":null},
+            {"index":7,"tabLabels":"Table","itemTitle":"TABLE","itemContText":"TABLE 컴포넌트","codeName":code07,"liveCode":false, "useComponent":<BasicTable />},
+            {"index":8,"tabLabels":"Tooltip","itemTitle":"ToolTip","itemContText":"ToolTip 컴포넌트","codeName":code08,"liveCode":false, "useComponent":<TriggersTooltips />},
+            {"index":9,"tabLabels":"Alert","itemTitle":"Alert","itemContText":"Alert 컴포넌트","codeName":code09,"liveCode":true, "useComponent":null},
+            {"index":10,"tabLabels":"Dialog","itemTitle":"Dialog","itemContText":"Dialog 컴포넌트","codeName":code10,"liveCode":false, "useComponent":<AlertDialog />},
+            {"index":11,"tabLabels":"Accordion","itemTitle":"Accordion","itemContText":"Accordion 컴포넌트","codeName":code11,"liveCode":true, "useComponent":null},
+            {"index":12,"tabLabels":"Pagination","itemTitle":"Pagination","itemContText":"Pagination 컴포넌트","codeName":code12,"liveCode":true, "useComponent":null},
+            {"index":13,"tabLabels":"Tabs","itemTitle":"Tabs","itemContText":"Tabs 컴포넌트","codeName":code13,"liveCode":false, "useComponent":<LabTabs />},
+            {"index":14,"tabLabels":"Modal","itemTitle":"Modal","itemContText":"Modal 컴포넌트","codeName":code14,"liveCode":false, "useComponent":<BasicModal />},
+            {"index":15,"tabLabels":"Date Pickers","itemTitle":"Date Pickers","itemContText":"Date Pickers 컴포넌트","codeName":code15,"liveCode":true, "useComponent":null}
         ]
     }
 
@@ -1164,7 +1144,7 @@ const MainComponentPage = (props) => {
                                             <Item sx={leftComponentBox}>
                                                 {items.liveCode ? <LivePreview /> : ""}
                                                 {items.liveCode ? <LiveError /> : ""}
-                                                {items.liveCode ? "" : items.componentName}
+                                                {items.liveCode ? "" : items.useComponent}
                                             </Item>
                                         </Grid>
                                         <Grid item xs={12} md={6} sx={{position: 'relative'}}>
