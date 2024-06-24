@@ -221,7 +221,7 @@ const MainLayoutPage = (props) => {
                                             </Item>
                                         </Grid>
                                         <Grid item xs={12} md={6} sx={{position: 'relative'}}>
-                                            <Item sx={rightCodeBox}>
+                                            <Item sx={{...rightCodeBox, backgroundColor: items.liveCode ? 'rgb(29, 31, 33)' : '#505050'}}>
                                                 <LiveEditor />
                                             </Item>
                                             <CopyButton onClick={handleToast} code={items.codeName} />

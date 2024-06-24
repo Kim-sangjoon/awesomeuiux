@@ -43,6 +43,7 @@ export const theme = createTheme({
         .sampleApp .bottom-last{height: 600px;}
         .sampleApp .MuiPaper-root > div{width: 100%;}
         .sampleApp .MuiPaper-root > div[class]{width: auto;}
+        .sampleApp .MuiPaper-root > div > pre.prism-code{background-color: transparent !important}
         .sampleApp h1,
         .sampleApp h2{color: #919191;}
         .sampleApp .fc-red{color: #ff6233;}

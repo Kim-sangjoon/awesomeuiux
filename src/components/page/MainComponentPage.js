@@ -1148,8 +1148,8 @@ const MainComponentPage = (props) => {
                                             </Item>
                                         </Grid>
                                         <Grid item xs={12} md={6} sx={{position: 'relative'}}>
-                                            <Item sx={rightCodeBox}>
-                                                {items.liveCode ? <LiveEditor /> : <LiveEditor disabled/>}
+                                            <Item sx={{...rightCodeBox, backgroundColor: items.liveCode ? 'rgb(29, 31, 33)' : '#505050'}}>
+                                                {items.liveCode ? <LiveEditor /> : <LiveEditor disabled />}
                                             </Item>
                                             <CopyButton onClick={handleToast} code={items.codeName} />
                                         </Grid>
