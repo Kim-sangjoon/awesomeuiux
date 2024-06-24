@@ -1098,21 +1098,21 @@ const MainComponentPage = (props) => {
     const pageData = {
         "pageTitle":"컴포넌트",
         "pageItems":[
-            {"index":1,"tabLabels":"Button","itemTitle":"버튼","itemContText":"버튼 컴포넌트","codeName":code01,"liveCode":true, "useComponent":null},
-            {"index":2,"tabLabels":"Checkbox","itemTitle":"체크박스","itemContText":"체크박스 컴포넌트","codeName":code02,"liveCode":true, "useComponent":null},
-            {"index":3,"tabLabels":"Radio Group","itemTitle":"라디오","itemContText":"라디오 컴포넌트","codeName":code03,"liveCode":true, "useComponent":null},
-            {"index":4,"tabLabels":"Select","itemTitle":"셀렉트","itemContText":"셀렉트 컴포넌트","codeName":code04,"liveCode":false, "useComponent":<Selectbox />},
-            {"index":5,"tabLabels":"Text Field","itemTitle":"TextField","itemContText":"TextField 컴포넌트","codeName":code05,"liveCode":true, "useComponent":null},
-            {"index":6,"tabLabels":"List","itemTitle":"LIST","itemContText":"LIST 컴포넌트","codeName":code06,"liveCode":true, "useComponent":null},
-            {"index":7,"tabLabels":"Table","itemTitle":"TABLE","itemContText":"TABLE 컴포넌트","codeName":code07,"liveCode":false, "useComponent":<BasicTable />},
-            {"index":8,"tabLabels":"Tooltip","itemTitle":"ToolTip","itemContText":"ToolTip 컴포넌트","codeName":code08,"liveCode":false, "useComponent":<TriggersTooltips />},
-            {"index":9,"tabLabels":"Alert","itemTitle":"Alert","itemContText":"Alert 컴포넌트","codeName":code09,"liveCode":true, "useComponent":null},
-            {"index":10,"tabLabels":"Dialog","itemTitle":"Dialog","itemContText":"Dialog 컴포넌트","codeName":code10,"liveCode":false, "useComponent":<AlertDialog />},
-            {"index":11,"tabLabels":"Accordion","itemTitle":"Accordion","itemContText":"Accordion 컴포넌트","codeName":code11,"liveCode":true, "useComponent":null},
-            {"index":12,"tabLabels":"Pagination","itemTitle":"Pagination","itemContText":"Pagination 컴포넌트","codeName":code12,"liveCode":true, "useComponent":null},
-            {"index":13,"tabLabels":"Tabs","itemTitle":"Tabs","itemContText":"Tabs 컴포넌트","codeName":code13,"liveCode":false, "useComponent":<LabTabs />},
-            {"index":14,"tabLabels":"Modal","itemTitle":"Modal","itemContText":"Modal 컴포넌트","codeName":code14,"liveCode":false, "useComponent":<BasicModal />},
-            {"index":15,"tabLabels":"Date Pickers","itemTitle":"Date Pickers","itemContText":"Date Pickers 컴포넌트","codeName":code15,"liveCode":true, "useComponent":null}
+            {"id":1,"tabLabels":"Button","itemTitle":"버튼","itemContText":"버튼 컴포넌트","codeName":code01,"liveCode":true, "useComponent":null},
+            {"id":2,"tabLabels":"Checkbox","itemTitle":"체크박스","itemContText":"체크박스 컴포넌트","codeName":code02,"liveCode":true, "useComponent":null},
+            {"id":3,"tabLabels":"Radio Group","itemTitle":"라디오","itemContText":"라디오 컴포넌트","codeName":code03,"liveCode":true, "useComponent":null},
+            {"id":4,"tabLabels":"Select","itemTitle":"셀렉트","itemContText":"셀렉트 컴포넌트","codeName":code04,"liveCode":false, "useComponent":<Selectbox />},
+            {"id":5,"tabLabels":"Text Field","itemTitle":"TextField","itemContText":"TextField 컴포넌트","codeName":code05,"liveCode":true, "useComponent":null},
+            {"id":6,"tabLabels":"List","itemTitle":"LIST","itemContText":"LIST 컴포넌트","codeName":code06,"liveCode":true, "useComponent":null},
+            {"id":7,"tabLabels":"Table","itemTitle":"TABLE","itemContText":"TABLE 컴포넌트","codeName":code07,"liveCode":false, "useComponent":<BasicTable />},
+            {"id":8,"tabLabels":"Tooltip","itemTitle":"ToolTip","itemContText":"ToolTip 컴포넌트","codeName":code08,"liveCode":false, "useComponent":<TriggersTooltips />},
+            {"id":9,"tabLabels":"Alert","itemTitle":"Alert","itemContText":"Alert 컴포넌트","codeName":code09,"liveCode":true, "useComponent":null},
+            {"id":10,"tabLabels":"Dialog","itemTitle":"Dialog","itemContText":"Dialog 컴포넌트","codeName":code10,"liveCode":false, "useComponent":<AlertDialog />},
+            {"id":11,"tabLabels":"Accordion","itemTitle":"Accordion","itemContText":"Accordion 컴포넌트","codeName":code11,"liveCode":true, "useComponent":null},
+            {"id":12,"tabLabels":"Pagination","itemTitle":"Pagination","itemContText":"Pagination 컴포넌트","codeName":code12,"liveCode":true, "useComponent":null},
+            {"id":13,"tabLabels":"Tabs","itemTitle":"Tabs","itemContText":"Tabs 컴포넌트","codeName":code13,"liveCode":false, "useComponent":<LabTabs />},
+            {"id":14,"tabLabels":"Modal","itemTitle":"Modal","itemContText":"Modal 컴포넌트","codeName":code14,"liveCode":false, "useComponent":<BasicModal />},
+            {"id":15,"tabLabels":"Date Pickers","itemTitle":"Date Pickers","itemContText":"Date Pickers 컴포넌트","codeName":code15,"liveCode":true, "useComponent":null}
         ]
     }
 
@@ -1131,10 +1131,10 @@ const MainComponentPage = (props) => {
                         onChange={handleTabChange}
                         sx={{backgroundColor: 'rgb(255 255 255 / 60%)'}}
                     >
-                        {pageData.pageItems.map(items => <Tab key={items.index} label={items.tabLabels} />)}
+                        {pageData.pageItems.map(items => <Tab key={items.id} label={items.tabLabels} />)}
                     </Tabs>
                     {pageData.pageItems.map(items => 
-                        <Box className='tab-item' key={items.index}>
+                        <Box className='tab-item' key={items.id}>
                             <h2>{items.itemTitle}</h2>
                             <p className='contText'>{items.itemContText}</p>
                             <Box sx={{ flexGrow: 1 }}>

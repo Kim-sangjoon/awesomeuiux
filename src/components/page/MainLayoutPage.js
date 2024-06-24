@@ -183,10 +183,10 @@ const MainLayoutPage = (props) => {
     const pageData = {
         "pageTitle":"레이아웃",
         "pageItems":[
-            {"index":1,"tabLabels":"분할 샘플","itemTitle":"분할 샘플(반응형)","itemContText":"레이아웃 컴포넌트","codeName":code01,"liveCode":true,"useComponent":null},
-            {"index":2,"tabLabels":"2분할","itemTitle":"2분할","itemContText":"2분할 레이아웃","codeName":code02,"liveCode":true,"useComponent":null},
-            {"index":3,"tabLabels":"3분할","itemTitle":"3분할","itemContText":"3분할 레이아웃","codeName":code03,"liveCode":true,"useComponent":null},
-            {"index":4,"tabLabels":"4분할","itemTitle":"4분할","itemContText":"4분할 레이아웃","codeName":code04,"liveCode":true,"useComponent":null}
+            {"id":1,"tabLabels":"분할 샘플","itemTitle":"분할 샘플(반응형)","itemContText":"레이아웃 컴포넌트","codeName":code01,"liveCode":true,"useComponent":null},
+            {"id":2,"tabLabels":"2분할","itemTitle":"2분할","itemContText":"2분할 레이아웃","codeName":code02,"liveCode":true,"useComponent":null},
+            {"id":3,"tabLabels":"3분할","itemTitle":"3분할","itemContText":"3분할 레이아웃","codeName":code03,"liveCode":true,"useComponent":null},
+            {"id":4,"tabLabels":"4분할","itemTitle":"4분할","itemContText":"4분할 레이아웃","codeName":code04,"liveCode":true,"useComponent":null}
         ]
     }
     return (
@@ -204,10 +204,10 @@ const MainLayoutPage = (props) => {
                         onChange={handleTabChange} 
                         sx={{backgroundColor: 'rgb(255 255 255 / 60%)'}}
                     >
-                        {pageData.pageItems.map(items => <Tab key={items.index} label={items.tabLabels} />)}
+                        {pageData.pageItems.map(items => <Tab key={items.id} label={items.tabLabels} />)}
                     </Tabs>
                     {pageData.pageItems.map(items => 
-                        <Box className='tab-item' key={items.index}>
+                        <Box className='tab-item' key={items.id}>
                             <h2>{items.itemTitle}</h2>
                             <p className='contText'>{items.itemContText}</p>
                             <Box sx={{ flexGrow: 1 }}>
