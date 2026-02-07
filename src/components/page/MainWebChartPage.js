@@ -95,7 +95,7 @@ const code01 = `<PieChart width={300} height={300}>
 />
 </PieChart>`;
 
-const code02 = `<BarChart width={400} height={300} data={[
+const code02 = `<BarChart width={300} height={300} data={[
     { name: "Jan", 월매출: 4000, 분기매출: 2400 },
     { name: "Feb", 월매출: 3000, 분기매출: 1398 },
     { name: "Mar", 월매출: 2000, 분기매출: 9800 },
@@ -112,7 +112,7 @@ const code02 = `<BarChart width={400} height={300} data={[
     <Bar dataKey="분기매출" fill="#82ca9d" />
 </BarChart>`;
 
-const code03 = `<LineChart width={400} height={300} data={[
+const code03 = `<LineChart width={300} height={300} data={[
     { name: "Jan", 방문자: 4000, 클릭수: 2400 },
     { name: "Feb", 방문자: 3000, 클릭수: 1398 },
     { name: "Mar", 방문자: 2000, 클릭수: 9800 },
